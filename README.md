@@ -24,6 +24,9 @@ GitHub provides a public search endpoint which you can use for fetching the most
 - Feel free to use any other endpoints, if you wish.
 - Should use ReactNative
 
+## UI Design
+[XD Files](https://drive.google.com/file/d/1v3hMX5awOcYY3eULlXMrWUWAYqWaBbJy/view?usp=sharing).
+
 ## Solution evaluation
 
 Your solution will be evaluated corresponding to these points:
