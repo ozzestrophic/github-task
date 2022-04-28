@@ -31,7 +31,7 @@ GitHub provides a public search endpoint which you can use for fetching the most
 
 Your solution will be evaluated corresponding to these points:
 
-- the solution should have both a web API and a CLI application.
+- The solution should have a CLI application.
 - Automated tests.
 - Scalability and performance.
 - Concise and clean code.
