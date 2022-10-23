@@ -23,7 +23,7 @@ The service should be able to provide:
 GitHub provides a public search endpoint which you can use for fetching the most popular repositories: [https://api.github.com/search/repositories?q=created:>2019-01-10&sort=stars&order=desc](https://api.github.com/search/repositories?q=created:%3E2019-01-10&sort=stars&order=desc).
 
 - Feel free to use any other endpoints, if you wish.
-- Should use ReactNative
+- Should use ReactNative CLI
 - Should use Redux or Redux ToolKit
 - Should use React Navigation
 
