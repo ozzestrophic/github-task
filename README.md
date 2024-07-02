@@ -17,6 +17,7 @@ The service should be able to provide:
 - Given a date, the most popular repositories created from this date onwards should be returned.
 - A filter for the programming language.
 - Big plus: design this service to be able to handle great load of requests per second
+- Add theming feature for convert the design to dark or light mode
 
 ## Implementation Details
 
@@ -24,8 +25,9 @@ GitHub provides a public search endpoint which you can use for fetching the most
 
 - Feel free to use any other endpoints, if you wish.
 - Should use ReactNative CLI
-- Should use Redux or Redux ToolKit
+- Should use Redux Not Redux ToolKit for state managment and for calling the endpoints
 - Should use React Navigation
+  
 
 ## UI Design
 [XD Files](https://drive.google.com/file/d/1v3hMX5awOcYY3eULlXMrWUWAYqWaBbJy/view?usp=sharing).
