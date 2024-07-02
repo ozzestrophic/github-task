@@ -25,7 +25,7 @@ GitHub provides a public search endpoint which you can use for fetching the most
 
 - Feel free to use any other endpoints, if you wish.
 - Should use ReactNative CLI
-- Should use Redux Not Redux ToolKit for state managment and for calling the endpoints
+- Should use Redux _not Redux ToolKit_ for state managment and for calling the endpoints
 - Should use React Navigation
   
 
