@@ -18,22 +18,9 @@ import {
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-
-const Explore = () => {
-  return (
-    <View style={styles.tabComponent}>
-      <Text>Explore!</Text>
-    </View>
-  );
-};
-
-const Repositories = () => {
-  return (
-    <View style={styles.tabComponent}>
-      <Text>Repositoris!</Text>
-    </View>
-  );
-};
+import Explore from './src/screens/Explore';
+import Repositories from './src/screens/Repositories';
+import styles from './src/styles.theme';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -57,22 +44,3 @@ const App = () => {
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  topBar: {
-    paddingTop: 44,
-    flex: 1,
-  },
-  logoBar: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 24,
-  },
-  tabComponent: {
-    backgroundColor: '#FAFCFE',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
