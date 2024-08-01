@@ -13,12 +13,19 @@ const Explore = () => {
     store.dispatch(fetchExploreRepos());
   }, []);
   const exploreRepos = useSelector(selectExploreRepos);
+  const reposFetchState = useSelector(state => state.explore.loading);
   const renderedListRepos = exploreRepos.map((item, index) => (
     <TrendingRepoCard key={index} repo={item} />
   ));
+
   return (
     <ScrollView style={styles.tabComponent}>
       <Text style={styles.title}>Explore popular</Text>
+      {reposFetchState && (
+        <View>
+          <Text style={{textAlign: 'center', padding: 10}}>Loading...</Text>
+        </View>
+      )}
       <View style={styles.reposContainer}>{renderedListRepos}</View>
     </ScrollView>
   );
