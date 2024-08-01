@@ -4,7 +4,7 @@ import styles from '../styles/theme';
 import TrendingRepoCard from '../components/TrendingRepoCard';
 import {useSelector} from 'react-redux';
 
-const selectExploreRepos = state => state.explore;
+const selectExploreRepos = state => state.explore.exploreRepos;
 
 const Explore = () => {
   const exploreRepos = useSelector(selectExploreRepos);
