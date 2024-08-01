@@ -3,6 +3,10 @@ import {Text, View} from 'react-native';
 import styles from '../styles/theme';
 import moment from 'moment';
 const TrendingRepoCard = ({repo}) => {
+  let starsCount = repo.stargazers_count;
+  if (starsCount > 1000) {
+    starsCount = Math.round(starsCount / 1000) + 'k';
+  }
   return (
     <View style={styles.repoCard}>
       <View style={styles.repoCardHeader}>
@@ -12,7 +16,7 @@ const TrendingRepoCard = ({repo}) => {
           <View style={styles.repoCardStarCounterContainer}>
             <Text
               style={[styles.repoCardStarLabel, styles.repoCardStarCounter]}>
-              {repo.stargazers_count}
+              {starsCount}
             </Text>
           </View>
         </View>
