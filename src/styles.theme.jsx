@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  topBar: {
+  main: {
     paddingTop: 44,
     flex: 1,
   },
@@ -14,8 +14,13 @@ const styles = StyleSheet.create({
   tabComponent: {
     backgroundColor: '#FAFCFE',
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    paddingTop: 36,
+    paddingHorizontal: 24,
+  },
+  title: {
+    fontSize: 20,
+    fontFamily: 'Silka',
+    fontWeight: 'normal',
   },
 });
 
