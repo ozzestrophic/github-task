@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
 import styles from '../styles/theme';
 import TrendingRepoCard from '../components/TrendingRepoCard';
 
 const Explore = () => {
   return (
-    <View style={styles.tabComponent}>
+    <ScrollView style={styles.tabComponent}>
       <Text style={styles.title}>Explore popular</Text>
       <View style={styles.reposContainer}>
         <TrendingRepoCard />
@@ -13,7 +13,7 @@ const Explore = () => {
         <TrendingRepoCard />
         <TrendingRepoCard />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
