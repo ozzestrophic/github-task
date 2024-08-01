@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import styles from '../styles/theme';
+import moment from 'moment';
 const TrendingRepoCard = ({repo}) => {
   return (
     <View style={styles.repoCard}>
@@ -21,9 +22,9 @@ const TrendingRepoCard = ({repo}) => {
       <View style={styles.separator} />
       <View style={styles.repoCardFooter}>
         <Text style={(styles.silkaNormal, {flex: 3})}>
-          Updated 12 hours ago
+          Updated {moment(repo.updated_at).fromNow()}
         </Text>
-        <Text style={(styles.silkaNormal, {flex: 2})}>C++</Text>
+        <Text style={(styles.silkaNormal, {flex: 2})}>{repo.language}</Text>
       </View>
     </View>
   );
