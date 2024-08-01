@@ -11,13 +11,13 @@ const TrendingRepoCard = ({repo}) => {
           <View style={styles.repoCardStarCounterContainer}>
             <Text
               style={[styles.repoCardStarLabel, styles.repoCardStarCounter]}>
-              {repo.starCount}
+              {repo.stargazers_count}
             </Text>
           </View>
         </View>
       </View>
-      <Text style={styles.repoCardTitle}>{repo.title}</Text>
-      <Text style={styles.repoCardDescription}>{repo.description}</Text>
+      <Text style={styles.repoCardTitle}>{repo.name}</Text>
+      <Text style={styles.repoCardDescription}>{repo.description.trim()}</Text>
       <View style={styles.separator} />
       <View style={styles.repoCardFooter}>
         <Text style={(styles.silkaNormal, {flex: 3})}>
