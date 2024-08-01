@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import RepoCard from '../components/RepoCard';
 
 const styles = StyleSheet.create({
   main: {
@@ -21,6 +22,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Silka',
     fontWeight: 'normal',
+  },
+  repoCard: {
+    padding: 16,
   },
 });
 

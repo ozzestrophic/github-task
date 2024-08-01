@@ -11,13 +11,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Explore from './src/screens/Explore';
 import Repositories from './src/screens/Repositories';
-import styles from './src/styles.theme';
+import styles from './src/styles/theme';
 
 const Tab = createMaterialTopTabNavigator();
 
 const App = () => {
   return (
-    <View style={styles.topBar}>
+    <View style={styles.main}>
       <View style={styles.logoBar}>
         <Image
           style={{width: 112, objectFit: 'contain'}}
