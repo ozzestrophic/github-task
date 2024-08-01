@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import {Image, ScrollView, useColorScheme, View} from 'react-native';
+import {Image, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Explore from './src/screens/Explore';
