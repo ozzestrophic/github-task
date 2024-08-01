@@ -42,16 +42,20 @@ export const fetchExploreRepos = (limit = 10, date = '', language = '') => {
   return async dispatch => {
     dispatch({type: FETCH_EXPLORE_REPOS_REQUEST});
     try {
-      const query = `q=${date && `created:>${date}+`}
-        ${language && `language:${language}&`}
-        sort=stars&order=desc
-        ${limit && `&per_page=${limit}`}
-        `;
+      const query = `q=stars:>1${date && `created:>${date}+`}${
+        language && `language:${language}&`
+      }&sort=stars&order=desc${limit && `&per_page=${limit}`}`;
+      console.log('query is ', query);
       const response = await axios.get(
-        `https://api.github.com/search/repositories${query}`,
+        `https://api.github.com/search/repositories?${query}`,
       );
-      console.log(response.data);
+      dispatch({
+        type: FETCH_EXPLORE_REPOS_SUCCESS,
+        payload: response.data.items,
+      });
+      console.log('fetched');
     } catch (error) {
+      console.log(error);
       dispatch({type: FETCH_EXPLORE_REPOS_FAILURE, payload: error.message});
     }
   };
