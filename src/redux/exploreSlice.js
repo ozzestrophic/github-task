@@ -5,6 +5,12 @@ const initialState = [
     description: 'repo1 description is here',
     starCount: 10,
   },
+  {
+    id: 2,
+    title: 'repo2',
+    description: 'repo2 description is here',
+    starCount: 12,
+  },
 ];
 
 const exploreReducer = (state = initialState, action) => {

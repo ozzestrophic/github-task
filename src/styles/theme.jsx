@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native';
-import RepoCard from '../components/TrendingRepoCard';
 
 const styles = StyleSheet.create({
   main: {
@@ -39,6 +38,7 @@ const styles = StyleSheet.create({
     shadowColor: 'rgba(204,212,221,0.33 )',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 1,
+    shadowRadius: 5,
   },
   repoCardHeader: {
     flexDirection: 'row',

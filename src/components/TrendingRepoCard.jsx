@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import styles from '../styles/theme';
-const TrendingRepoCard = () => {
+const TrendingRepoCard = ({repo}) => {
   return (
     <View style={styles.repoCard}>
       <View style={styles.repoCardHeader}>
@@ -11,17 +11,13 @@ const TrendingRepoCard = () => {
           <View style={styles.repoCardStarCounterContainer}>
             <Text
               style={[styles.repoCardStarLabel, styles.repoCardStarCounter]}>
-              40.5K
+              {repo.starCount}
             </Text>
           </View>
         </View>
       </View>
-      <Text style={styles.repoCardTitle}>RepoCard</Text>
-      <Text style={styles.repoCardDescription}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam.
-      </Text>
+      <Text style={styles.repoCardTitle}>{repo.title}</Text>
+      <Text style={styles.repoCardDescription}>{repo.description}</Text>
       <View style={styles.separator} />
       <View style={styles.repoCardFooter}>
         <Text style={(styles.silkaNormal, {flex: 3})}>
