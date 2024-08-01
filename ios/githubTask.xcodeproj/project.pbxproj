@@ -9,12 +9,28 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* githubTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* githubTaskTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-githubTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-githubTask.a */; };
+		0EF4922B8E6E4363BEB6A3AC /* Silka Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74280A80E77C4E7596993D93 /* Silka Medium.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1BFE0DC1D61447C5B3EB31E8 /* Silka SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D335356649C54EA8B95F8312 /* Silka SemiBold.otf */; };
 		20D76757973ECD0BAD57EB0D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = AFC5C293FDF3E7C0FF4859D3 /* PrivacyInfo.xcprivacy */; };
+		239FA508F7804ED6B582ADB1 /* Silka Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D912C9519FD4E4397EE747C /* Silka Bold Italic.otf */; };
+		24FCB3FDA88C4942A9778184 /* Silka Regular Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F5BB580899F46EB9EEB7EF7 /* Silka Regular Italic.otf */; };
+		3148FCA2B18E4FC99C6A3D41 /* Silka Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EBDDB7381843EE888124A8 /* Silka Thin.otf */; };
+		3C6C9DE30B1445F391C7B969 /* Silka Extra Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9BD9EC272C84764BACE958B /* Silka Extra Light Italic.otf */; };
+		4C86B1B837824F14B510C8EE /* Silka SemiBold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E59F3A973604087B50BC9A1 /* Silka SemiBold Italic.otf */; };
+		52CE8E9DBB284E2E801DDE98 /* Silka Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1280F6FE46140C1B1C677E7 /* Silka Regular.otf */; };
+		5FC8A5D595DD43029B3ED097 /* Silka Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57494C104E9F4B75AC2F510B /* Silka Black.otf */; };
+		75C48A86E3D24DD9924B1D0D /* Silka Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E440539ED0044FBBD62AA50 /* Silka Bold.otf */; };
 		7699B88040F8A987B510C191 /* libPods-githubTask-githubTaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-githubTask-githubTaskTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A73086A54FFE4D509F5D6CA5 /* Silka Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 691F6D09AF7F4744B2FF35D8 /* Silka Light Italic.otf */; };
+		CA421EC531714A978975D38D /* Silka Extra Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9756006847AC480495DDA222 /* Silka Extra Light.otf */; };
+		CDB76EC6A1FF4FDBA920F406 /* Silka Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6458665DCA4E451FBE3432CA /* Silka Medium Italic.otf */; };
+		D0CFCF13A7244906B16151A7 /* Silka Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69DEB3C24C0847DB89C4F800 /* Silka Black Italic.otf */; };
+		D921E1CD88F44489983BC21B /* Silka Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57DBDBCE80E54A888CE7E43A /* Silka Thin Italic.otf */; };
+		FCD7A4B2272740228A86DDA9 /* Silka Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5AD79A6B5534F1DAA75FAB2 /* Silka Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +55,29 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = githubTask/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = githubTask/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-githubTask-githubTaskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-githubTask-githubTaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5BB580899F46EB9EEB7EF7 /* Silka Regular Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Regular Italic.otf"; path = "../src/assets/fonts/Silka Regular Italic.otf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-githubTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubTask.debug.xcconfig"; path = "Target Support Files/Pods-githubTask/Pods-githubTask.debug.xcconfig"; sourceTree = "<group>"; };
+		4E440539ED0044FBBD62AA50 /* Silka Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Bold.otf"; path = "../src/assets/fonts/Silka Bold.otf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-githubTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubTask.release.xcconfig"; path = "Target Support Files/Pods-githubTask/Pods-githubTask.release.xcconfig"; sourceTree = "<group>"; };
+		57494C104E9F4B75AC2F510B /* Silka Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Black.otf"; path = "../src/assets/fonts/Silka Black.otf"; sourceTree = "<group>"; };
+		57DBDBCE80E54A888CE7E43A /* Silka Thin Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Thin Italic.otf"; path = "../src/assets/fonts/Silka Thin Italic.otf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-githubTask-githubTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubTask-githubTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-githubTask-githubTaskTests/Pods-githubTask-githubTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-githubTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-githubTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6458665DCA4E451FBE3432CA /* Silka Medium Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Medium Italic.otf"; path = "../src/assets/fonts/Silka Medium Italic.otf"; sourceTree = "<group>"; };
+		691F6D09AF7F4744B2FF35D8 /* Silka Light Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Light Italic.otf"; path = "../src/assets/fonts/Silka Light Italic.otf"; sourceTree = "<group>"; };
+		69DEB3C24C0847DB89C4F800 /* Silka Black Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Black Italic.otf"; path = "../src/assets/fonts/Silka Black Italic.otf"; sourceTree = "<group>"; };
+		6E59F3A973604087B50BC9A1 /* Silka SemiBold Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka SemiBold Italic.otf"; path = "../src/assets/fonts/Silka SemiBold Italic.otf"; sourceTree = "<group>"; };
+		74280A80E77C4E7596993D93 /* Silka Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Medium.otf"; path = "../src/assets/fonts/Silka Medium.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = githubTask/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81EBDDB7381843EE888124A8 /* Silka Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Thin.otf"; path = "../src/assets/fonts/Silka Thin.otf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-githubTask-githubTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubTask-githubTaskTests.release.xcconfig"; path = "Target Support Files/Pods-githubTask-githubTaskTests/Pods-githubTask-githubTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		9756006847AC480495DDA222 /* Silka Extra Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Extra Light.otf"; path = "../src/assets/fonts/Silka Extra Light.otf"; sourceTree = "<group>"; };
+		9D912C9519FD4E4397EE747C /* Silka Bold Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Bold Italic.otf"; path = "../src/assets/fonts/Silka Bold Italic.otf"; sourceTree = "<group>"; };
 		AFC5C293FDF3E7C0FF4859D3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = githubTask/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D1280F6FE46140C1B1C677E7 /* Silka Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Regular.otf"; path = "../src/assets/fonts/Silka Regular.otf"; sourceTree = "<group>"; };
+		D335356649C54EA8B95F8312 /* Silka SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka SemiBold.otf"; path = "../src/assets/fonts/Silka SemiBold.otf"; sourceTree = "<group>"; };
+		E5AD79A6B5534F1DAA75FAB2 /* Silka Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Light.otf"; path = "../src/assets/fonts/Silka Light.otf"; sourceTree = "<group>"; };
+		E9BD9EC272C84764BACE958B /* Silka Extra Light Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Silka Extra Light Italic.otf"; path = "../src/assets/fonts/Silka Extra Light Italic.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -101,6 +133,30 @@
 			name = githubTask;
 			sourceTree = "<group>";
 		};
+		2500FA0E028D40658B6A8D3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				69DEB3C24C0847DB89C4F800 /* Silka Black Italic.otf */,
+				57494C104E9F4B75AC2F510B /* Silka Black.otf */,
+				9D912C9519FD4E4397EE747C /* Silka Bold Italic.otf */,
+				4E440539ED0044FBBD62AA50 /* Silka Bold.otf */,
+				E9BD9EC272C84764BACE958B /* Silka Extra Light Italic.otf */,
+				9756006847AC480495DDA222 /* Silka Extra Light.otf */,
+				691F6D09AF7F4744B2FF35D8 /* Silka Light Italic.otf */,
+				E5AD79A6B5534F1DAA75FAB2 /* Silka Light.otf */,
+				6458665DCA4E451FBE3432CA /* Silka Medium Italic.otf */,
+				74280A80E77C4E7596993D93 /* Silka Medium.otf */,
+				2F5BB580899F46EB9EEB7EF7 /* Silka Regular Italic.otf */,
+				D1280F6FE46140C1B1C677E7 /* Silka Regular.otf */,
+				6E59F3A973604087B50BC9A1 /* Silka SemiBold Italic.otf */,
+				D335356649C54EA8B95F8312 /* Silka SemiBold.otf */,
+				57DBDBCE80E54A888CE7E43A /* Silka Thin Italic.otf */,
+				81EBDDB7381843EE888124A8 /* Silka Thin.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +183,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				2500FA0E028D40658B6A8D3A /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -249,6 +306,22 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				20D76757973ECD0BAD57EB0D /* PrivacyInfo.xcprivacy in Resources */,
+				D0CFCF13A7244906B16151A7 /* Silka Black Italic.otf in Resources */,
+				5FC8A5D595DD43029B3ED097 /* Silka Black.otf in Resources */,
+				239FA508F7804ED6B582ADB1 /* Silka Bold Italic.otf in Resources */,
+				75C48A86E3D24DD9924B1D0D /* Silka Bold.otf in Resources */,
+				3C6C9DE30B1445F391C7B969 /* Silka Extra Light Italic.otf in Resources */,
+				CA421EC531714A978975D38D /* Silka Extra Light.otf in Resources */,
+				A73086A54FFE4D509F5D6CA5 /* Silka Light Italic.otf in Resources */,
+				FCD7A4B2272740228A86DDA9 /* Silka Light.otf in Resources */,
+				CDB76EC6A1FF4FDBA920F406 /* Silka Medium Italic.otf in Resources */,
+				0EF4922B8E6E4363BEB6A3AC /* Silka Medium.otf in Resources */,
+				24FCB3FDA88C4942A9778184 /* Silka Regular Italic.otf in Resources */,
+				52CE8E9DBB284E2E801DDE98 /* Silka Regular.otf in Resources */,
+				4C86B1B837824F14B510C8EE /* Silka SemiBold Italic.otf in Resources */,
+				1BFE0DC1D61447C5B3EB31E8 /* Silka SemiBold.otf in Resources */,
+				D921E1CD88F44489983BC21B /* Silka Thin Italic.otf in Resources */,
+				3148FCA2B18E4FC99C6A3D41 /* Silka Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
