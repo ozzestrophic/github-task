@@ -6,6 +6,10 @@ const styles = StyleSheet.create({
     paddingTop: 44,
     flex: 1,
   },
+  logoImage: {
+    width: 112,
+    objectFit: 'contain',
+  },
   logoBar: {
     justifyContent: 'space-between',
     flexDirection: 'row',

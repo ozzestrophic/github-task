@@ -20,11 +20,11 @@ const App = () => {
     <View style={styles.main}>
       <View style={styles.logoBar}>
         <Image
-          style={{width: 112, objectFit: 'contain'}}
+          style={styles.logoImage}
           source={require('./src/assets/images/logo.png')}
         />
       </View>
-      <NavigationContainer style={{flex: 1}}>
+      <NavigationContainer>
         <Tab.Navigator>
           <Tab.Screen name="Explore" component={Explore} />
           <Tab.Screen name="Repositories" component={Repositories} />
