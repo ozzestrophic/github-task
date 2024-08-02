@@ -2,21 +2,21 @@ import axios from 'axios';
 
 const initialState = {
   loading: false,
-  exploreRepos: [],
+  repos: [],
   error: null,
 };
 
-const FETCH_EXPLORE_REPOS_REQUEST = 'FETCH_EXPLORE_REPOS_REQUEST';
-const FETCH_EXPLORE_REPOS_SUCCESS = 'FETCH_EXPLORE_REPOS_SUCCESS';
-const FETCH_EXPLORE_REPOS_FAILURE = 'FETCH_EXPLORE_REPOS_FAILURE';
+const FETCH_REPOS_REQUEST = 'FETCH_REPOS_REQUEST';
+const FETCH_REPOS_SUCCESS = 'FETCH_REPOS_SUCCESS';
+const FETCH_REPOS_FAILURE = 'FETCH_REPOS_FAILURE';
 
 const repositoriesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_EXPLORE_REPOS_REQUEST:
+    case FETCH_REPOS_REQUEST:
       return {...state, loading: true, error: null};
-    case FETCH_EXPLORE_REPOS_SUCCESS:
-      return {...state, loading: false, exploreRepos: action.payload};
-    case FETCH_EXPLORE_REPOS_FAILURE:
+    case FETCH_REPOS_SUCCESS:
+      return {...state, loading: false, repos: action.payload};
+    case FETCH_REPOS_FAILURE:
       return {...state, loading: false, error: action.payload};
     default:
       return state;
@@ -25,25 +25,29 @@ const repositoriesReducer = (state = initialState, action) => {
 
 export default repositoriesReducer;
 
-export const fetchRepos = (limit = 10, date = '', language = '') => {
+export const fetchRepos = (
+  limit = 10,
+  date = '2019-01-10',
+  language = 'Javascript',
+) => {
   return async dispatch => {
-    dispatch({type: FETCH_EXPLORE_REPOS_REQUEST});
+    dispatch({type: FETCH_REPOS_REQUEST});
     try {
-      const query = `q=stars:>1${date && `created:>${date}+`}${
-        language && `language:${language}&`
+      const query = `q=stars:>1${date && `+created:>${date}`}${
+        language && `+language:${language}&`
       }&sort=stars&order=desc${limit && `&per_page=${limit}`}`;
       console.log('query is ', query);
       const response = await axios.get(
         `https://api.github.com/search/repositories?${query}`,
       );
       dispatch({
-        type: FETCH_EXPLORE_REPOS_SUCCESS,
+        type: FETCH_REPOS_SUCCESS,
         payload: response.data.items,
       });
       console.log('fetched');
     } catch (error) {
       console.log(error);
-      dispatch({type: FETCH_EXPLORE_REPOS_FAILURE, payload: error.message});
+      dispatch({type: FETCH_REPOS_FAILURE, payload: error.message});
     }
   };
 };
