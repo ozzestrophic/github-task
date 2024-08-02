@@ -136,13 +136,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 22,
   },
+  modalBackdrop: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    zIndex: 1,
+  },
   modalContainer: {
     padding: 24,
     backgroundColor: '#FFFFFF',
-    minWidth: '90%',
+    // minWidth: '90%',
+    marginHorizontal: 24,
     height: '60%',
     borderRadius: 16,
-    shadowColor: 'rgba(204,212,221,0.33 )',
+    shadowColor: 'rgba(204,212,221,0.33)',
+    elevation: 20,
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 1,
     shadowRadius: 5,
@@ -150,6 +160,7 @@ const styles = StyleSheet.create({
   modalHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    zIndex: 2,
   },
   modalTitle: {
     fontFamily: 'Silka',
@@ -163,12 +174,30 @@ const styles = StyleSheet.create({
     color: '#7B848D',
     borderRadius: 8,
   },
+  itemSeparatorStyle: {
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+  },
   selectMenuContainer: {
     // width: '100%',
     borderColor: '#FFFFFF',
-    backgroundColor: '#FFFFFF',
-    height: '60%',
+    // height: '60%',
     shadowOpacity: 0,
+  },
+  searchContainerStyle: {
+    borderBottomColor: '#ffffff',
+    padding: 0,
+  },
+  searchTextInputStyle: {
+    borderColor: '#d9d9d9',
+    fontFamily: 'Silka',
+    height: 40,
+  },
+  textStyle: {
+    fontFamily: 'Silka',
+    fontSize: 14,
+  },
+  noHeight: {
+    height: 0,
   },
 });
 

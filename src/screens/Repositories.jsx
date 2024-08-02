@@ -63,35 +63,57 @@ const Repositories = () => {
     <TrendingRepoCard key={index} repo={item} />
   ));
   return (
-    <ScrollView style={styles.tabComponent}>
-      <Text style={styles.title}>Repositories</Text>
-      <View style={styles.modalButtonsContainer}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={langModalVisible}
-          onRequestClose={() => {
-            setLangModalVisible(!langModalVisible);
-          }}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalContainer}>
-              <View style={styles.modalHeader}>
-                <Text style={styles.modalTitle}>Select Language</Text>
-                <Pressable
-                  style={[styles.button, styles.buttonClose]}
-                  onPress={() => setLangModalVisible(!langModalVisible)}>
-                  <Text style={styles.textStyle}>Hide Modal</Text>
-                </Pressable>
-              </View>
-              <DropDownPicker
-                open={open}
-                value={language}
-                items={languageItems}
-                setOpen={setOpen}
-                setValue={setLanguage}
-                setItems={setLanguageItems}
-              />
-              {/* <Dropdown
+    <View style={{position: 'relative', flex: 1}}>
+      {langModalVisible && <View style={styles.modalBackdrop} />}
+      <ScrollView style={styles.tabComponent}>
+        <Text style={styles.title}>Repositories</Text>
+        <View style={styles.modalButtonsContainer}>
+          <Modal
+            animationType="slide"
+            transparent={true}
+            visible={langModalVisible}
+            onRequestClose={() => {
+              setLangModalVisible(!langModalVisible);
+            }}>
+            <View style={styles.centeredView}>
+              <View style={styles.modalContainer}>
+                <View style={styles.modalHeader}>
+                  <Text style={styles.modalTitle}>Select Language</Text>
+                  <Pressable
+                    style={[styles.button, styles.buttonClose]}
+                    onPress={() => setLangModalVisible(!langModalVisible)}>
+                    <Text style={styles.textStyle}>Hide Modal</Text>
+                  </Pressable>
+                </View>
+                <DropDownPicker
+                  dropDownContainerStyle={styles.selectMenuContainer}
+                  style={{
+                    // borderColor: 'white',
+                    backgroundColor: 'red',
+                    padding: 0,
+                    height: 0,
+                  }}
+                  containerStyle={{
+                    backgroundColor: 'red',
+                    borderColor: 'red',
+                    height: 0,
+                  }}
+                  textStyle={styles.textStyle}
+                  labelStyle={styles.noHeight}
+                  arrowIconStyle={styles.noHeight}
+                  searchContainerStyle={styles.searchContainerStyle}
+                  searchTextInputStyle={styles.searchTextInputStyle}
+                  itemSeparator={true}
+                  itemSeparatorStyle={styles.itemSeparatorStyle}
+                  open={true}
+                  value={language}
+                  items={languageItems}
+                  searchable={true}
+                  setOpen={setOpen}
+                  setValue={setLanguage}
+                  setItems={setLanguageItems}
+                />
+                {/* <Dropdown
                 // style={styles.modalButton}
                 containerStyle={styles.selectMenuContainer}
                 placeholderStyle={styles.buttonLabel}
@@ -109,27 +131,28 @@ const Repositories = () => {
                   setLanguage(item.value);
                 }}
               /> */}
+              </View>
             </View>
-          </View>
-        </Modal>
-        <Pressable
-          style={styles.modalButton}
-          onPress={() => setLangModalVisible(true)}>
-          <Text style={styles.buttonLabel}>Language: </Text>
-          <Text>{language ? language : 'Any'}</Text>
-        </Pressable>
-        <Pressable style={styles.modalButton}>
-          <Text style={styles.buttonLabel}>Date: </Text>
-          <Text>{date ? date : 'Any'}</Text>
-        </Pressable>
-      </View>
-      {reposFetchState && (
-        <View>
-          <Text style={{textAlign: 'center', padding: 10}}>Loading...</Text>
+          </Modal>
+          <Pressable
+            style={styles.modalButton}
+            onPress={() => setLangModalVisible(true)}>
+            <Text style={styles.buttonLabel}>Language: </Text>
+            <Text>{language ? language : 'Any'}</Text>
+          </Pressable>
+          <Pressable style={styles.modalButton}>
+            <Text style={styles.buttonLabel}>Date: </Text>
+            <Text>{date ? date : 'Any'}</Text>
+          </Pressable>
         </View>
-      )}
-      <View style={styles.reposContainer}>{renderedListRepos}</View>
-    </ScrollView>
+        {reposFetchState && (
+          <View>
+            <Text style={{textAlign: 'center', padding: 10}}>Loading...</Text>
+          </View>
+        )}
+        <View style={styles.reposContainer}>{renderedListRepos}</View>
+      </ScrollView>
+    </View>
   );
 };
 
