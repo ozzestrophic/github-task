@@ -130,6 +130,12 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     color: '#7B848D',
   },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+  },
   modalContainer: {
     padding: 24,
     backgroundColor: '#FFFFFF',
@@ -140,6 +146,15 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 1,
     shadowRadius: 5,
+  },
+  modalHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  modalTitle: {
+    fontFamily: 'Silka',
+    fontSize: 14,
+    fontWeight: '500',
   },
   inputSearchStyle: {
     fontFamily: 'Silka',

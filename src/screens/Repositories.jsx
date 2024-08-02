@@ -12,6 +12,8 @@ const selectRepositories = state => state.repositories.repos;
 const Repositories = () => {
   const [language, setLanguage] = useState('');
   const [date, setDate] = useState('');
+  const [langModalVisible, setLangModalVisible] = useState(false);
+  const [dateModalVisible, setDateModalVisible] = useState(false);
   const languageData = [
     {label: 'Javascript', value: 'Javascript'},
     {label: 'Python', value: 'Python'},
@@ -57,7 +59,7 @@ const Repositories = () => {
     <ScrollView style={styles.tabComponent}>
       <Text style={styles.title}>Repositories</Text>
       <View style={styles.modalButtonsContainer}>
-        <Dropdown
+        {/* <Dropdown
           style={styles.modalButton}
           containerStyle={styles.modalContainer}
           mode="modal"
@@ -74,7 +76,33 @@ const Repositories = () => {
           onChange={item => {
             setLanguage(item.value);
           }}
-        />
+        /> */}
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={langModalVisible}
+          onRequestClose={() => {
+            setLangModalVisible(!langModalVisible);
+          }}>
+          <View style={styles.centeredView}>
+            <View style={styles.modalContainer}>
+              <View style={styles.modalHeader}>
+                <Text style={styles.modalTitle}>Select Language</Text>
+                <Pressable
+                  style={[styles.button, styles.buttonClose]}
+                  onPress={() => setLangModalVisible(!langModalVisible)}>
+                  <Text style={styles.textStyle}>Hide Modal</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        </Modal>
+        <Pressable
+          style={styles.modalButton}
+          onPress={() => setLangModalVisible(true)}>
+          <Text style={styles.buttonLabel}>Language: </Text>
+          <Text>{language ? language : 'Any'}</Text>
+        </Pressable>
         <Pressable style={styles.modalButton}>
           <Text style={styles.buttonLabel}>Date: </Text>
           <Text>{date ? date : 'Any'}</Text>
