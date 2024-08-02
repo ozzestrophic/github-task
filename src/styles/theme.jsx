@@ -163,6 +163,13 @@ const styles = StyleSheet.create({
     color: '#7B848D',
     borderRadius: 8,
   },
+  selectMenuContainer: {
+    // width: '100%',
+    borderColor: '#FFFFFF',
+    backgroundColor: '#FFFFFF',
+    height: '60%',
+    shadowOpacity: 0,
+  },
 });
 
 export default styles;

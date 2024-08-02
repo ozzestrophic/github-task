@@ -6,14 +6,21 @@ import {fetchRepos} from '../redux/repositoriesSlice';
 import {useSelector} from 'react-redux';
 import TrendingRepoCard from '../components/TrendingRepoCard';
 import {Dropdown} from 'react-native-element-dropdown';
+import DropDownPicker from 'react-native-dropdown-picker';
 
 const selectRepositories = state => state.repositories.repos;
 
 const Repositories = () => {
-  const [language, setLanguage] = useState('');
+  const [language, setLanguage] = useState(null);
   const [date, setDate] = useState('');
   const [langModalVisible, setLangModalVisible] = useState(false);
-  const [dateModalVisible, setDateModalVisible] = useState(false);
+  // const [dateModalVisible, setDateModalVisible] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [languageItems, setLanguageItems] = useState([
+    {label: 'Javascript', value: 'Javascript'},
+    {label: 'Python', value: 'Python'},
+    {label: 'Java', value: 'Java'},
+  ]);
   const languageData = [
     {label: 'Javascript', value: 'Javascript'},
     {label: 'Python', value: 'Python'},
@@ -48,8 +55,8 @@ const Repositories = () => {
     {label: 'Erlang', value: 'Erlang'},
   ];
   useEffect(() => {
-    store.dispatch(fetchRepos(10, date, language));
-  }, [language, date]);
+    store.dispatch(fetchRepos(10, '2019-01-10', 'Javascript'));
+  }, []);
   const fetchedRepos = useSelector(selectRepositories);
   const reposFetchState = useSelector(state => state.repositories.loading);
   const renderedListRepos = fetchedRepos.map((item, index) => (
@@ -59,24 +66,6 @@ const Repositories = () => {
     <ScrollView style={styles.tabComponent}>
       <Text style={styles.title}>Repositories</Text>
       <View style={styles.modalButtonsContainer}>
-        {/* <Dropdown
-          style={styles.modalButton}
-          containerStyle={styles.modalContainer}
-          mode="modal"
-          placeholderStyle={styles.buttonLabel}
-          selectedTextStyle={styles.selectedTextStyle}
-          inputSearchStyle={styles.inputSearchStyle}
-          data={languageData}
-          search
-          labelField="label"
-          valueField="value"
-          placeholder="Language"
-          searchPlaceholder="Filter language"
-          value={language}
-          onChange={item => {
-            setLanguage(item.value);
-          }}
-        /> */}
         <Modal
           animationType="slide"
           transparent={true}
@@ -94,6 +83,32 @@ const Repositories = () => {
                   <Text style={styles.textStyle}>Hide Modal</Text>
                 </Pressable>
               </View>
+              <DropDownPicker
+                open={open}
+                value={language}
+                items={languageItems}
+                setOpen={setOpen}
+                setValue={setLanguage}
+                setItems={setLanguageItems}
+              />
+              {/* <Dropdown
+                // style={styles.modalButton}
+                containerStyle={styles.selectMenuContainer}
+                placeholderStyle={styles.buttonLabel}
+                selectedTextStyle={styles.selectedTextStyle}
+                inputSearchStyle={styles.inputSearchStyle}
+                data={languageData}
+                search
+                labelField="label"
+                valueField="value"
+                placeholder="Language"
+                searchPlaceholder="Filter language"
+                open={true}
+                value={language}
+                onChange={item => {
+                  setLanguage(item.value);
+                }}
+              /> */}
             </View>
           </View>
         </Modal>
