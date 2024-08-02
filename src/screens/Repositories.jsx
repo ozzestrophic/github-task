@@ -18,7 +18,6 @@ const Repositories = () => {
   const renderedListRepos = fetchedRepos.map((item, index) => (
     <TrendingRepoCard key={index} repo={item} />
   ));
-  console.log('fetched is ' + fetchedRepos);
   return (
     <ScrollView style={styles.tabComponent}>
       <Text style={styles.title}>Repositories</Text>
