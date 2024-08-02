@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Silka',
     fontWeight: 'normal',
+    marginBottom: 16,
   },
   reposContainer: {
     marginTop: 16,
@@ -95,6 +96,16 @@ const styles = StyleSheet.create({
     fontFamily: 'Silka',
     fontSize: 12,
     fontWeight: 'normal',
+  },
+  dropDownPickerContainer: {
+    borderRadius: 13,
+    borderColor: '#E5E5E5',
+    width: '45%',
+  },
+  dropDownPicker: {
+    borderRadius: 13,
+    borderColor: '#E5E5E5',
+    width: '45%',
   },
 });
 
