@@ -10,6 +10,7 @@ import closeIcon from '../assets/icons/close.png';
 import {languageData} from '../utils/languages';
 import ExploreLanguageModal from '../components/ExploreLanguageModal';
 import SelectModal from '../components/SelectModal';
+import ExploreDateModal from '../components/ExploreDateModal';
 
 const selectRepositories = state => state.repositories.repos;
 
@@ -53,7 +54,10 @@ const Repositories = () => {
             title={'Select Date'}
             modalVisible={dateModalVisible}
             setModalVisible={setDateModalVisible}>
-            <Text>new modal</Text>
+            <ExploreDateModal
+              setDate={setDate}
+              setDateModalVisible={setDateModalVisible}
+            />
           </SelectModal>
           <Pressable
             style={styles.modalButton}
