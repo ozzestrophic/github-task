@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 5,
   },
-  modalClose: {
+  modalHeader: {
     position: 'absolute',
     flexDirection: 'row',
     width: '100%',

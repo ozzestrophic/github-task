@@ -5,7 +5,6 @@ import store from '../redux/store';
 import {fetchRepos} from '../redux/repositoriesSlice';
 import {useSelector} from 'react-redux';
 import TrendingRepoCard from '../components/TrendingRepoCard';
-import {Dropdown} from 'react-native-element-dropdown';
 import DropDownPicker from 'react-native-dropdown-picker';
 import closeIcon from '../assets/icons/close.png';
 
@@ -102,7 +101,7 @@ const Repositories = () => {
             }}>
             <View style={styles.centeredView}>
               <View style={styles.modalContainer}>
-                <View style={styles.modalClose}>
+                <View style={styles.modalHeader}>
                   <Text style={styles.modalTitle}>Select Language</Text>
                   <Pressable
                     style={[styles.button, styles.buttonClose]}
@@ -126,30 +125,13 @@ const Repositories = () => {
                     searchPlaceholder="Filter languages"
                     value={language}
                     items={languageItems}
+                    maxHeight={400}
                     searchable={true}
                     setOpen={setOpen}
                     setValue={setLanguage}
                     setItems={setLanguageItems}
                   />
                 </View>
-                {/* <Dropdown
-                // style={styles.modalButton}
-                containerStyle={styles.selectMenuContainer}
-                placeholderStyle={styles.buttonLabel}
-                selectedTextStyle={styles.selectedTextStyle}
-                inputSearchStyle={styles.inputSearchStyle}
-                data={languageData}
-                search
-                labelField="label"
-                valueField="value"
-                placeholder="Language"
-                searchPlaceholder="Filter language"
-                open={true}
-                value={language}
-                onChange={item => {
-                  setLanguage(item.value);
-                }}
-              /> */}
               </View>
             </View>
           </Modal>
