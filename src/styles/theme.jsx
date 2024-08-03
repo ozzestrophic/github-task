@@ -145,7 +145,8 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   modalContainer: {
-    padding: 24,
+    paddingHorizontal: 24,
+    paddingVertical: 10,
     backgroundColor: '#FFFFFF',
     // minWidth: '90%',
     marginHorizontal: 24,
@@ -157,9 +158,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 5,
   },
-  modalHeader: {
+  modalClose: {
+    position: 'absolute',
     flexDirection: 'row',
+    width: '100%',
     justifyContent: 'space-between',
+    backgroundColor: '#FFFFFF',
+    top: 24,
+    left: 24,
     zIndex: 2,
   },
   modalTitle: {
@@ -177,10 +183,12 @@ const styles = StyleSheet.create({
   itemSeparatorStyle: {
     backgroundColor: 'rgba(0, 0, 0, 0.1)',
   },
+  selectMenuWrapper: {
+    zIndex: 1,
+  },
   selectMenuContainer: {
     // width: '100%',
     borderColor: '#FFFFFF',
-    // height: '60%',
     shadowOpacity: 0,
   },
   searchContainerStyle: {
@@ -195,9 +203,17 @@ const styles = StyleSheet.create({
   textStyle: {
     fontFamily: 'Silka',
     fontSize: 14,
+    fontWeight: '500',
   },
   noHeight: {
     height: 0,
+  },
+  hideBorder: {
+    borderColor: 'white',
+  },
+  closeIcon: {
+    width: 20,
+    height: 20,
   },
 });
 

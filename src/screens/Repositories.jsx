@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Modal, Pressable, ScrollView, Text, View} from 'react-native';
+import {Image, Modal, Pressable, ScrollView, Text, View} from 'react-native';
 import styles from '../styles/theme';
 import store from '../redux/store';
 import {fetchRepos} from '../redux/repositoriesSlice';
@@ -7,6 +7,7 @@ import {useSelector} from 'react-redux';
 import TrendingRepoCard from '../components/TrendingRepoCard';
 import {Dropdown} from 'react-native-element-dropdown';
 import DropDownPicker from 'react-native-dropdown-picker';
+import closeIcon from '../assets/icons/close.png';
 
 const selectRepositories = state => state.repositories.repos;
 
@@ -20,6 +21,32 @@ const Repositories = () => {
     {label: 'Javascript', value: 'Javascript'},
     {label: 'Python', value: 'Python'},
     {label: 'Java', value: 'Java'},
+    {label: 'C++', value: 'C++'},
+    {label: 'C#', value: 'C#'},
+    {label: 'PHP', value: 'PHP'},
+    {label: 'Ruby', value: 'Ruby'},
+    {label: 'Kotlin', value: 'Kotlin'},
+    {label: 'Go', value: 'Go'},
+    {label: 'C', value: 'C'},
+    {label: 'Swift', value: 'Swift'},
+    {label: 'Objective-C', value: 'Objective-C'},
+    {label: 'Rust', value: 'Rust'},
+    {label: 'R', value: 'R'},
+    {label: 'Dart', value: 'Dart'},
+    {label: 'Scala', value: 'Scala'},
+    {label: 'Elixir', value: 'Elixir'},
+    {label: 'Erlang', value: 'Erlang'},
+    {label: 'TypeScript', value: 'TypeScript'},
+    {label: 'Cobol', value: 'Cobol'},
+    {label: 'Haskell', value: 'Haskell'},
+    {label: 'F#', value: 'F#'},
+    {label: 'Clojure', value: 'Clojure'},
+    {label: 'Racket', value: 'Racket'},
+    {label: 'Julia', value: 'Julia'},
+    {label: 'Forth', value: 'Forth'},
+    {label: 'Pascal', value: 'Pascal'},
+    {label: 'Solidity', value: 'Solidity'},
+    {label: 'Haxe', value: 'Haxe'},
   ]);
   const languageData = [
     {label: 'Javascript', value: 'Javascript'},
@@ -43,7 +70,6 @@ const Repositories = () => {
     {label: 'TypeScript', value: 'TypeScript'},
     {label: 'Cobol', value: 'Cobol'},
     {label: 'Haskell', value: 'Haskell'},
-    {label: 'Rust', value: 'Rust'},
     {label: 'F#', value: 'F#'},
     {label: 'Clojure', value: 'Clojure'},
     {label: 'Racket', value: 'Racket'},
@@ -52,7 +78,6 @@ const Repositories = () => {
     {label: 'Pascal', value: 'Pascal'},
     {label: 'Solidity', value: 'Solidity'},
     {label: 'Haxe', value: 'Haxe'},
-    {label: 'Erlang', value: 'Erlang'},
   ];
   useEffect(() => {
     store.dispatch(fetchRepos(10, '2019-01-10', 'Javascript'));
@@ -77,42 +102,36 @@ const Repositories = () => {
             }}>
             <View style={styles.centeredView}>
               <View style={styles.modalContainer}>
-                <View style={styles.modalHeader}>
+                <View style={styles.modalClose}>
                   <Text style={styles.modalTitle}>Select Language</Text>
                   <Pressable
                     style={[styles.button, styles.buttonClose]}
                     onPress={() => setLangModalVisible(!langModalVisible)}>
-                    <Text style={styles.textStyle}>Hide Modal</Text>
+                    <Image source={closeIcon} style={styles.closeIcon} />
                   </Pressable>
                 </View>
-                <DropDownPicker
-                  dropDownContainerStyle={styles.selectMenuContainer}
-                  style={{
-                    // borderColor: 'white',
-                    backgroundColor: 'red',
-                    padding: 0,
-                    height: 0,
-                  }}
-                  containerStyle={{
-                    backgroundColor: 'red',
-                    borderColor: 'red',
-                    height: 0,
-                  }}
-                  textStyle={styles.textStyle}
-                  labelStyle={styles.noHeight}
-                  arrowIconStyle={styles.noHeight}
-                  searchContainerStyle={styles.searchContainerStyle}
-                  searchTextInputStyle={styles.searchTextInputStyle}
-                  itemSeparator={true}
-                  itemSeparatorStyle={styles.itemSeparatorStyle}
-                  open={true}
-                  value={language}
-                  items={languageItems}
-                  searchable={true}
-                  setOpen={setOpen}
-                  setValue={setLanguage}
-                  setItems={setLanguageItems}
-                />
+                <View style={styles.selectMenuWrapper}>
+                  <DropDownPicker
+                    dropDownContainerStyle={styles.selectMenuContainer}
+                    style={styles.hideBorder}
+                    textStyle={styles.textStyle}
+                    labelStyle={styles.noHeight}
+                    arrowIconStyle={styles.noHeight}
+                    searchContainerStyle={styles.searchContainerStyle}
+                    searchTextInputStyle={styles.searchTextInputStyle}
+                    itemSeparator={true}
+                    itemSeparatorStyle={styles.itemSeparatorStyle}
+                    open={true}
+                    placeholder="Select Language"
+                    searchPlaceholder="Filter languages"
+                    value={language}
+                    items={languageItems}
+                    searchable={true}
+                    setOpen={setOpen}
+                    setValue={setLanguage}
+                    setItems={setLanguageItems}
+                  />
+                </View>
                 {/* <Dropdown
                 // style={styles.modalButton}
                 containerStyle={styles.selectMenuContainer}
