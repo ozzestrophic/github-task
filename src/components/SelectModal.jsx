@@ -3,7 +3,7 @@ import {Text, Modal, View, Pressable, Image} from 'react-native';
 import styles from '../styles/theme';
 import closeIcon from '../assets/icons/close.png';
 
-const SelectModal = ({children, modalVisible, setModalVisible}) => {
+const SelectModal = ({children, modalVisible, setModalVisible, title}) => {
   return (
     <Modal
       animationType="slide"
@@ -15,7 +15,7 @@ const SelectModal = ({children, modalVisible, setModalVisible}) => {
       <View style={styles.centeredView}>
         <View style={styles.modalContainer}>
           <View style={styles.modalHeader}>
-            <Text style={styles.modalTitle}>Select Language</Text>
+            <Text style={styles.modalTitle}>{title}</Text>
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setModalVisible(!modalVisible)}>

@@ -17,8 +17,8 @@ const Repositories = () => {
   const [language, setLanguage] = useState('');
   const [date, setDate] = useState('');
   const [langModalVisible, setLangModalVisible] = useState(false);
-  // const [dateModalVisible, setDateModalVisible] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [dateModalVisible, setDateModalVisible] = useState(false);
+  const [languageSelectOpen, setLanguageSelectOpen] = useState(false);
   const [languageItems, setLanguageItems] = useState(languageData);
 
   useEffect(() => {
@@ -36,6 +36,7 @@ const Repositories = () => {
         <Text style={styles.title}>Repositories</Text>
         <View style={styles.modalButtonsContainer}>
           <SelectModal
+            title={'Select language'}
             modalVisible={langModalVisible}
             setModalVisible={setLangModalVisible}>
             <ExploreLanguageModal
@@ -45,8 +46,14 @@ const Repositories = () => {
               setLanguage={setLanguage}
               languageItems={languageItems}
               setLanguageItems={setLanguageItems}
-              setOpen={setOpen}
+              setOpen={setLanguageSelectOpen}
             />
+          </SelectModal>
+          <SelectModal
+            title={'Select Date'}
+            modalVisible={dateModalVisible}
+            setModalVisible={setDateModalVisible}>
+            <Text>new modal</Text>
           </SelectModal>
           <Pressable
             style={styles.modalButton}
@@ -54,7 +61,9 @@ const Repositories = () => {
             <Text style={styles.buttonLabel}>Language: </Text>
             <Text>{language ? language : 'Any'}</Text>
           </Pressable>
-          <Pressable style={styles.modalButton}>
+          <Pressable
+            style={styles.modalButton}
+            onPress={() => setDateModalVisible(true)}>
             <Text style={styles.buttonLabel}>Date: </Text>
             <Text>{date ? date : 'Any'}</Text>
           </Pressable>
