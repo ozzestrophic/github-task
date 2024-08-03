@@ -8,11 +8,12 @@ import TrendingRepoCard from '../components/TrendingRepoCard';
 import DropDownPicker from 'react-native-dropdown-picker';
 import closeIcon from '../assets/icons/close.png';
 import {languageData} from '../utils/languages';
+import ExploreLanguageModal from '../components/ExploreLanguageModal';
 
 const selectRepositories = state => state.repositories.repos;
 
 const Repositories = () => {
-  const [language, setLanguage] = useState(null);
+  const [language, setLanguage] = useState('');
   const [date, setDate] = useState('');
   const [langModalVisible, setLangModalVisible] = useState(false);
   // const [dateModalVisible, setDateModalVisible] = useState(false);
@@ -41,40 +42,15 @@ const Repositories = () => {
               setLangModalVisible(!langModalVisible);
             }}>
             <View style={styles.centeredView}>
-              <View style={styles.modalContainer}>
-                <View style={styles.modalHeader}>
-                  <Text style={styles.modalTitle}>Select Language</Text>
-                  <Pressable
-                    style={[styles.button, styles.buttonClose]}
-                    onPress={() => setLangModalVisible(!langModalVisible)}>
-                    <Image source={closeIcon} style={styles.closeIcon} />
-                  </Pressable>
-                </View>
-                <View style={styles.selectMenuWrapper}>
-                  <DropDownPicker
-                    dropDownContainerStyle={styles.selectMenuContainer}
-                    style={styles.hideBorder}
-                    textStyle={styles.textStyle}
-                    labelStyle={styles.noHeight}
-                    arrowIconStyle={styles.noHeight}
-                    searchContainerStyle={styles.searchContainerStyle}
-                    searchTextInputStyle={styles.searchTextInputStyle}
-                    itemSeparator={true}
-                    itemSeparatorStyle={styles.itemSeparatorStyle}
-                    open={true}
-                    placeholder="Select Language"
-                    searchPlaceholder="Filter languages"
-                    value={language}
-                    items={languageItems}
-                    // TODO: remove hard coding
-                    maxHeight={400}
-                    searchable={true}
-                    setOpen={setOpen}
-                    setValue={setLanguage}
-                    setItems={setLanguageItems}
-                  />
-                </View>
-              </View>
+              <ExploreLanguageModal
+                langModalVisible={langModalVisible}
+                setLangModalVisible={setLangModalVisible}
+                language={language}
+                setLanguage={setLanguage}
+                languageItems={languageItems}
+                setLanguageItems={setLanguageItems}
+                setOpen={setOpen}
+              />
             </View>
           </Modal>
           <Pressable
