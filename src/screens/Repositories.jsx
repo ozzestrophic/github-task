@@ -20,8 +20,8 @@ const Repositories = () => {
   const [languageItems, setLanguageItems] = useState(languageData);
 
   useEffect(() => {
-    store.dispatch(fetchRepos(10, '2019-01-10', 'Javascript'));
-  }, []);
+    store.dispatch(fetchRepos(10, '2019-01-10', language));
+  }, [language]);
   const fetchedRepos = useSelector(selectRepositories);
   const reposFetchState = useSelector(state => state.repositories.loading);
   const renderedListRepos = fetchedRepos.map((item, index) => (
@@ -66,6 +66,7 @@ const Repositories = () => {
                     searchPlaceholder="Filter languages"
                     value={language}
                     items={languageItems}
+                    // TODO: remove hard coding
                     maxHeight={400}
                     searchable={true}
                     setOpen={setOpen}

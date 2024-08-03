@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 
+// TODO: Add theme colors
 const styles = StyleSheet.create({
   main: {
     paddingTop: 44,
