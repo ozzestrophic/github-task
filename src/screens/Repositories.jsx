@@ -9,6 +9,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import closeIcon from '../assets/icons/close.png';
 import {languageData} from '../utils/languages';
 import ExploreLanguageModal from '../components/ExploreLanguageModal';
+import SelectModal from '../components/SelectModal';
 
 const selectRepositories = state => state.repositories.repos;
 
@@ -34,25 +35,19 @@ const Repositories = () => {
       <ScrollView style={styles.tabComponent}>
         <Text style={styles.title}>Repositories</Text>
         <View style={styles.modalButtonsContainer}>
-          <Modal
-            animationType="slide"
-            transparent={true}
-            visible={langModalVisible}
-            onRequestClose={() => {
-              setLangModalVisible(!langModalVisible);
-            }}>
-            <View style={styles.centeredView}>
-              <ExploreLanguageModal
-                langModalVisible={langModalVisible}
-                setLangModalVisible={setLangModalVisible}
-                language={language}
-                setLanguage={setLanguage}
-                languageItems={languageItems}
-                setLanguageItems={setLanguageItems}
-                setOpen={setOpen}
-              />
-            </View>
-          </Modal>
+          <SelectModal
+            modalVisible={langModalVisible}
+            setModalVisible={setLangModalVisible}>
+            <ExploreLanguageModal
+              langModalVisible={langModalVisible}
+              setLangModalVisible={setLangModalVisible}
+              language={language}
+              setLanguage={setLanguage}
+              languageItems={languageItems}
+              setLanguageItems={setLanguageItems}
+              setOpen={setOpen}
+            />
+          </SelectModal>
           <Pressable
             style={styles.modalButton}
             onPress={() => setLangModalVisible(true)}>
