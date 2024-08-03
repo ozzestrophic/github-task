@@ -4145,7 +4145,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.8.15":
+"dayjs@npm:^1.11.10, dayjs@npm:^1.8.15":
   version: 1.11.12
   resolution: "dayjs@npm:1.11.12"
   checksum: 40a4f67c2df3af125ae0ddec68d3a6d806d3009a7414bf45479aaf82f1dd82f3e139e6642e72391abccc37488897830c56afcabb4c819014130d283644df8128
@@ -5302,11 +5302,11 @@ __metadata:
     react-native: 0.74.4
     react-native-dropdown-picker: ^5.4.6
     react-native-element-dropdown: ^2.12.1
-    react-native-modal-datetime-picker: ^17.1.0
     react-native-pager-view: ^6.3.3
     react-native-safe-area-context: ^4.10.8
     react-native-screens: ^3.33.0
     react-native-tab-view: ^3.5.2
+    react-native-ui-datepicker: ^2.0.3
     react-redux: ^9.1.2
     react-test-renderer: 18.2.0
     redux: ^5.0.1
@@ -8072,7 +8072,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8208,18 +8208,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-modal-datetime-picker@npm:^17.1.0":
-  version: 17.1.0
-  resolution: "react-native-modal-datetime-picker@npm:17.1.0"
-  dependencies:
-    prop-types: ^15.7.2
-  peerDependencies:
-    "@react-native-community/datetimepicker": ">=6.7.0"
-    react-native: ">=0.65.0"
-  checksum: 8a5bb21167799cc5410c0fb6c39bb3495fbaa463ef57d8f90c65429697c2b02b2e4e046e3e91c6246e1f4bd187c5fbcd30f61a6449b8d68808e68715b1332779
-  languageName: node
-  linkType: hard
-
 "react-native-pager-view@npm:^6.3.3":
   version: 6.3.3
   resolution: "react-native-pager-view@npm:6.3.3"
@@ -8263,6 +8251,28 @@ __metadata:
     react-native: "*"
     react-native-pager-view: "*"
   checksum: bd287e5543881aa662ee55418a3bd5dacb25033425a9fcb0fff21c3a3b96f956af1a77cd9bab4e7a8e94590080a5d8e3cb99cfa8613b19bf6da24bfc9b4942d4
+  languageName: node
+  linkType: hard
+
+"react-native-ui-datepicker@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "react-native-ui-datepicker@npm:2.0.3"
+  dependencies:
+    dayjs: ^1.11.10
+    lodash: ^4.17.21
+    react-native-wheely: ^0.6.0
+    uninstall: ^0.0.0
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: fabfa33021a54467e33f12701531031ccd85991ab420cc3e3c709d2a8eff021f72b696f7f221461ec74e4bf69c2546966d87449a1f0ea6f2bde3f320c747df4b
+  languageName: node
+  linkType: hard
+
+"react-native-wheely@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "react-native-wheely@npm:0.6.0"
+  checksum: 3223c0056160f02696e0d980198b6b3ada6b401c7fba17882253e5700c4066c5c2b9834213317e6c190a1e991acfec7c5526ee08ca89d5eed133c247386cd180
   languageName: node
   linkType: hard
 
@@ -9635,6 +9645,13 @@ __metadata:
   version: 2.1.0
   resolution: "unicode-property-aliases-ecmascript@npm:2.1.0"
   checksum: 243524431893649b62cc674d877bd64ef292d6071dd2fd01ab4d5ad26efbc104ffcd064f93f8a06b7e4ec54c172bf03f6417921a0d8c3a9994161fe1f88f815b
+  languageName: node
+  linkType: hard
+
+"uninstall@npm:^0.0.0":
+  version: 0.0.0
+  resolution: "uninstall@npm:0.0.0"
+  checksum: c6cadbaf1a6f746a6a8871bb38b2b6020cf4bb72d2bdd6b5442d569b14d8c8f84014c7ce93cdb2946916f7ae22cbc758f8a6f94c2ee1a1898149df8aaac5599d
   languageName: node
   linkType: hard
 
