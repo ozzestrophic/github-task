@@ -7,6 +7,7 @@ import {useSelector} from 'react-redux';
 import TrendingRepoCard from '../components/TrendingRepoCard';
 import DropDownPicker from 'react-native-dropdown-picker';
 import closeIcon from '../assets/icons/close.png';
+import {languageData} from '../utils/languages';
 
 const selectRepositories = state => state.repositories.repos;
 
@@ -16,68 +17,8 @@ const Repositories = () => {
   const [langModalVisible, setLangModalVisible] = useState(false);
   // const [dateModalVisible, setDateModalVisible] = useState(false);
   const [open, setOpen] = useState(false);
-  const [languageItems, setLanguageItems] = useState([
-    {label: 'Javascript', value: 'Javascript'},
-    {label: 'Python', value: 'Python'},
-    {label: 'Java', value: 'Java'},
-    {label: 'C++', value: 'C++'},
-    {label: 'C#', value: 'C#'},
-    {label: 'PHP', value: 'PHP'},
-    {label: 'Ruby', value: 'Ruby'},
-    {label: 'Kotlin', value: 'Kotlin'},
-    {label: 'Go', value: 'Go'},
-    {label: 'C', value: 'C'},
-    {label: 'Swift', value: 'Swift'},
-    {label: 'Objective-C', value: 'Objective-C'},
-    {label: 'Rust', value: 'Rust'},
-    {label: 'R', value: 'R'},
-    {label: 'Dart', value: 'Dart'},
-    {label: 'Scala', value: 'Scala'},
-    {label: 'Elixir', value: 'Elixir'},
-    {label: 'Erlang', value: 'Erlang'},
-    {label: 'TypeScript', value: 'TypeScript'},
-    {label: 'Cobol', value: 'Cobol'},
-    {label: 'Haskell', value: 'Haskell'},
-    {label: 'F#', value: 'F#'},
-    {label: 'Clojure', value: 'Clojure'},
-    {label: 'Racket', value: 'Racket'},
-    {label: 'Julia', value: 'Julia'},
-    {label: 'Forth', value: 'Forth'},
-    {label: 'Pascal', value: 'Pascal'},
-    {label: 'Solidity', value: 'Solidity'},
-    {label: 'Haxe', value: 'Haxe'},
-  ]);
-  const languageData = [
-    {label: 'Javascript', value: 'Javascript'},
-    {label: 'Python', value: 'Python'},
-    {label: 'Java', value: 'Java'},
-    {label: 'C++', value: 'C++'},
-    {label: 'C#', value: 'C#'},
-    {label: 'PHP', value: 'PHP'},
-    {label: 'Ruby', value: 'Ruby'},
-    {label: 'Kotlin', value: 'Kotlin'},
-    {label: 'Go', value: 'Go'},
-    {label: 'C', value: 'C'},
-    {label: 'Swift', value: 'Swift'},
-    {label: 'Objective-C', value: 'Objective-C'},
-    {label: 'Rust', value: 'Rust'},
-    {label: 'R', value: 'R'},
-    {label: 'Dart', value: 'Dart'},
-    {label: 'Scala', value: 'Scala'},
-    {label: 'Elixir', value: 'Elixir'},
-    {label: 'Erlang', value: 'Erlang'},
-    {label: 'TypeScript', value: 'TypeScript'},
-    {label: 'Cobol', value: 'Cobol'},
-    {label: 'Haskell', value: 'Haskell'},
-    {label: 'F#', value: 'F#'},
-    {label: 'Clojure', value: 'Clojure'},
-    {label: 'Racket', value: 'Racket'},
-    {label: 'Julia', value: 'Julia'},
-    {label: 'Forth', value: 'Forth'},
-    {label: 'Pascal', value: 'Pascal'},
-    {label: 'Solidity', value: 'Solidity'},
-    {label: 'Haxe', value: 'Haxe'},
-  ];
+  const [languageItems, setLanguageItems] = useState(languageData);
+
   useEffect(() => {
     store.dispatch(fetchRepos(10, '2019-01-10', 'Javascript'));
   }, []);
