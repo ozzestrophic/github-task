@@ -7,6 +7,7 @@ type Colors = {
   tertiary_text: string;
   accent_color: string;
   accent_color_faded: string;
+  accent_color_faded_bg: string;
 };
 
 const COLORS_LIGHT: Colors = {
@@ -18,6 +19,7 @@ const COLORS_LIGHT: Colors = {
   tertiary_text: '#7B848D',
   accent_color: '#68DDBA',
   accent_color_faded: 'rgba(104,221,186,0.25)',
+  accent_color_faded_bg: 'rgba(43,17,144,0.11)',
 };
 const COLORS_DARK: Colors = {
   primary_background: '#161B21',
@@ -28,6 +30,7 @@ const COLORS_DARK: Colors = {
   tertiary_text: '#CCD4DD',
   accent_color: '#68DDBA',
   accent_color_faded: 'rgba(104,221,186,0.25)',
+  accent_color_faded_bg: 'rgba(104,221,186,0.25)',
 };
 
 export const COLORS = {

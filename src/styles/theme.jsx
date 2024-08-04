@@ -31,6 +31,12 @@ const styles = StyleSheet.create({
   flex1: {
     flex: 1,
   },
+  flex2: {
+    flex: 2,
+  },
+  flex3: {
+    flex: 3,
+  },
   reposContainer: {
     marginTop: 16,
     gap: 16,
@@ -38,12 +44,7 @@ const styles = StyleSheet.create({
   repoCard: {
     padding: 16,
     gap: 12,
-    backgroundColor: '#ffffff',
     borderRadius: 13,
-    shadowColor: 'rgba(204,212,221,0.33 )',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 1,
-    shadowRadius: 5,
   },
   repoCardHeader: {
     flexDirection: 'row',
@@ -54,7 +55,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Silka',
     fontSize: 10,
     fontWeight: 'normal',
-    color: '#7b848d',
   },
   repoCardStarContainer: {
     flexDirection: 'row',
@@ -68,11 +68,8 @@ const styles = StyleSheet.create({
   },
   repoCardStarCounterContainer: {
     padding: 4,
-    backgroundColor: 'rgba(43, 17, 144, 0.11)',
+    // backgroundColor: 'rgba(43, 17, 144, 0.11)',
     borderRadius: 4,
-  },
-  repoCardStarCounter: {
-    color: '#2b1190',
   },
   repoCardTitle: {
     fontFamily: 'Silka',
@@ -271,6 +268,9 @@ export const lightColors = StyleSheet.create({
   accent_color_faded: {
     color: COLORS.light.accent_color_faded,
   },
+  accent_color_background: {
+    backgroundColor: COLORS.light.accent_color_faded_bg,
+  },
   hideBorder: {
     borderColor: COLORS.light.primary_background,
   },
@@ -298,6 +298,9 @@ export const darkColors = StyleSheet.create({
   },
   accent_color: {
     color: COLORS.dark.accent_color,
+  },
+  accent_color_background: {
+    backgroundColor: COLORS.dark.accent_color_faded_bg,
   },
   accent_color_faded: {
     color: COLORS.dark.accent_color_faded,
