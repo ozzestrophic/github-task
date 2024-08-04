@@ -17,7 +17,6 @@ const ExploreDateModal = ({date, setDate, setDateModalVisible}) => {
 
   return (
     <View style={styles.dateModalContainer}>
-      {/* <Button title="Show Date Picker" onPress={showDatePicker} /> */}
       <DateTimePicker
         mode="single"
         date={date}
@@ -27,8 +26,8 @@ const ExploreDateModal = ({date, setDate, setDateModalVisible}) => {
         weekDaysTextStyle={styles.dateModalWeekDaysTextStyle}
         headerTextStyle={styles.silkaBold}
         selectedItemColor="rgba(104,221,186,0.25)"
-        // todayContainerStyle="rgba(104,221,186,0.25)"
-        // todayContainerStyle="red"
+        todayContainerStyle={styles.dateModalTodayContainerStyle}
+        todayTextStyle={styles.dateModalTodayTextStyle}
         selectedTextStyle={styles.dateModalSelectedTextStyle}
       />
     </View>

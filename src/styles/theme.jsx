@@ -237,6 +237,13 @@ const styles = StyleSheet.create({
   },
   dateModalWeekDaysTextStyle: {color: 'gray'},
   dateModalCalendarTextStyle: {fontFamily: 'Silka', fontSize: 17},
+  dateModalTodayContainerStyle: {
+    borderColor: 'rgba(104,221,186,0.25)',
+  },
+  dateModalTodayTextStyle: {
+    color: 'rgba(104,221,186,1)',
+    fontWeight: '600',
+  },
 });
 
 export default styles;
