@@ -20,7 +20,7 @@ const Repositories = () => {
   const [date, setDate] = useState('2024-01-10');
   const [langModalVisible, setLangModalVisible] = useState(false);
   const [dateModalVisible, setDateModalVisible] = useState(false);
-  const [languageSelectOpen, setLanguageSelectOpen] = useState(false);
+  const [setLanguageSelectOpen] = useState(false);
   const [languageItems, setLanguageItems] = useState(languageData);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Repositories = () => {
     <TrendingRepoCard key={index} repo={item} />
   ));
   return (
-    <View style={{position: 'relative', flex: 1}}>
+    <View style={styles.flex1}>
       {langModalVisible && <View style={styles.modalBackdrop} />}
       <ScrollView style={styles.tabComponent}>
         <Text style={styles.title}>Repositories</Text>
@@ -88,7 +88,7 @@ const Repositories = () => {
         </View>
         {reposFetchState && (
           <View>
-            <Text style={{textAlign: 'center', padding: 10}}>Loading...</Text>
+            <Text style={styles.repoFetchIndicator}>Loading...</Text>
           </View>
         )}
         <View style={styles.reposContainer}>{renderedListRepos}</View>

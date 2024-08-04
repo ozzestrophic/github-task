@@ -28,6 +28,9 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     marginBottom: 16,
   },
+  flex1: {
+    flex: 1,
+  },
   reposContainer: {
     marginTop: 16,
     gap: 16,
@@ -247,6 +250,7 @@ const styles = StyleSheet.create({
   marginLeftAuto: {
     marginLeft: 'auto',
   },
+  repoFetchIndicator: {textAlign: 'center', padding: 10},
 });
 
 export default styles;
