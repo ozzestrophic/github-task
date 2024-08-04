@@ -9,6 +9,9 @@ import {languageData} from '../utils/languages';
 import ExploreLanguageModal from '../components/ExploreLanguageModal';
 import SelectModal from '../components/SelectModal';
 import ExploreDateModal from '../components/ExploreDateModal';
+import dayjs from 'dayjs';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faChevronDown} from '@fortawesome/free-solid-svg-icons/faChevronDown';
 
 const selectRepositories = state => state.repositories.repos;
 
@@ -61,14 +64,26 @@ const Repositories = () => {
           <Pressable
             style={styles.modalButton}
             onPress={() => setLangModalVisible(true)}>
-            <Text style={styles.buttonLabel}>Language: </Text>
+            <Text style={styles.buttonLabel}>
+              {language ? 'Lang: ' : 'Language: '}{' '}
+            </Text>
             <Text>{language ? language : 'Any'}</Text>
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              size={12}
+              style={styles.marginLeftAuto}
+            />
           </Pressable>
           <Pressable
             style={styles.modalButton}
             onPress={() => setDateModalVisible(true)}>
             <Text style={styles.buttonLabel}>Date: </Text>
-            <Text>{date ? date : 'Any'}</Text>
+            <Text>{date ? dayjs(date).format('D MMM YY') : 'Any'}</Text>
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              size={12}
+              style={styles.marginLeftAuto}
+            />
           </Pressable>
         </View>
         {reposFetchState && (

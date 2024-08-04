@@ -120,8 +120,8 @@ const styles = StyleSheet.create({
   modalButton: {
     flexDirection: 'row',
     alignItems: 'center',
+    width: '45%',
     flex: 1,
-    gap: 4,
     padding: 12,
     backgroundColor: '#FFFFFF',
     borderRadius: 8,
@@ -243,6 +243,9 @@ const styles = StyleSheet.create({
   dateModalTodayTextStyle: {
     color: 'rgba(104,221,186,1)',
     fontWeight: '600',
+  },
+  marginLeftAuto: {
+    marginLeft: 'auto',
   },
 });
 
