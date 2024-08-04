@@ -1,6 +1,7 @@
 import React from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
-import styles from '../styles/theme';
+import styles, {darkColors, lightColors} from '../styles/theme';
+import {useSelector} from 'react-redux';
 
 const ExploreLanguageModal = ({
   languageItems,
@@ -10,15 +11,21 @@ const ExploreLanguageModal = ({
   setLanguageItems,
   setLangModalVisible,
 }) => {
+  const colorMode = useSelector(state => state.colorMode.mode);
+  const theme = colorMode === 'light' ? lightColors : darkColors;
   return (
     <DropDownPicker
-      dropDownContainerStyle={styles.selectMenuContainer}
-      style={styles.hideBorder}
-      textStyle={styles.textStyle}
+      dropDownContainerStyle={[
+        styles.selectMenuContainer,
+        theme.primary_background,
+      ]}
+      style={[theme.hideBorder, theme.primary_background]}
+      textStyle={[styles.textStyle]}
       labelStyle={styles.noHeight}
       arrowIconStyle={styles.noHeight}
       searchContainerStyle={styles.searchContainerStyle}
-      searchTextInputStyle={styles.searchTextInputStyle}
+      searchTextInputStyle={[styles.searchTextInputStyle, theme.tertiary_text]}
+      listItemContainerStyle={theme.hideBorder}
       itemSeparator={true}
       itemSeparatorStyle={styles.itemSeparatorStyle}
       open={true}

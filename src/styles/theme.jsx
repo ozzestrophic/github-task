@@ -150,25 +150,22 @@ const styles = StyleSheet.create({
   modalContainer: {
     paddingHorizontal: 24,
     paddingVertical: 10,
-    backgroundColor: '#FFFFFF',
     // minWidth: '90%',
     marginHorizontal: 24,
     minHeight: '45%',
     // minHeight: 'fit-content',
     // overflow: 'hidden',
     borderRadius: 16,
-    shadowColor: 'rgba(204,212,221,0.33)',
     elevation: 20,
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 1,
-    shadowRadius: 5,
+    // shadowOffset: {width: 0, height: 2},
+    // shadowOpacity: 1,
+    // shadowRadius: 5,
   },
   modalHeader: {
     position: 'absolute',
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'space-between',
-    backgroundColor: '#FFFFFF',
     top: 24,
     left: 24,
     zIndex: 2,
@@ -212,9 +209,6 @@ const styles = StyleSheet.create({
   },
   noHeight: {
     height: 0,
-  },
-  hideBorder: {
-    borderColor: 'white',
   },
   closeIcon: {
     width: 20,
@@ -278,6 +272,9 @@ export const lightColors = StyleSheet.create({
   accent_color_faded: {
     color: COLORS.light.accent_color_faded,
   },
+  hideBorder: {
+    borderColor: COLORS.light.primary_background,
+  },
 });
 export const darkColors = StyleSheet.create({
   primary_background: {
@@ -305,5 +302,8 @@ export const darkColors = StyleSheet.create({
   },
   accent_color_faded: {
     color: COLORS.dark.accent_color_faded,
+  },
+  hideBorder: {
+    borderColor: COLORS.dark.primary_background,
   },
 });

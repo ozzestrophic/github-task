@@ -20,8 +20,8 @@ const COLORS_LIGHT: Colors = {
   accent_color_faded: 'rgba(104,221,186,0.25)',
 };
 const COLORS_DARK: Colors = {
-  primary_background: '#000000',
-  secondary_background: '#161B21',
+  primary_background: '#161B21',
+  secondary_background: '#000000',
   secondary_border: 'rgba(204,212,221,0.2)',
   primary_text: '#FFFFFF',
   secondary_text: '#FFFFFF',

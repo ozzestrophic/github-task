@@ -23,7 +23,7 @@ const Repositories = () => {
   const [date, setDate] = useState('2024-01-10');
   const [langModalVisible, setLangModalVisible] = useState(false);
   const [dateModalVisible, setDateModalVisible] = useState(false);
-  const [setLanguageSelectOpen] = useState(false);
+  const [LanguageSelectOpen, setLanguageSelectOpen] = useState(false);
   const [languageItems, setLanguageItems] = useState(languageData);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Repositories = () => {
   return (
     <View style={styles.flex1}>
       {langModalVisible && <View style={styles.modalBackdrop} />}
-      <ScrollView style={[styles.tabComponent, theme.primary_background]}>
+      <ScrollView style={[styles.tabComponent, theme.secondary_background]}>
         <Text style={[styles.title, theme.primary_text]}>Repositories</Text>
         <View style={styles.modalButtonsContainer}>
           <SelectModal

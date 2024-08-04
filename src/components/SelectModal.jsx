@@ -1,9 +1,13 @@
 import React from 'react';
 import {Text, Modal, View, Pressable, Image} from 'react-native';
-import styles from '../styles/theme';
+import styles, {darkColors, lightColors} from '../styles/theme';
 import closeIcon from '../assets/icons/close.png';
+import {useSelector} from 'react-redux';
 
 const SelectModal = ({children, modalVisible, setModalVisible, title}) => {
+  const colorMode = useSelector(state => state.colorMode.mode);
+  const theme = colorMode === 'light' ? lightColors : darkColors;
+
   return (
     <Modal
       animationType="slide"
@@ -13,11 +17,16 @@ const SelectModal = ({children, modalVisible, setModalVisible, title}) => {
         setModalVisible(!modalVisible);
       }}>
       <View style={styles.centeredView}>
-        <View style={styles.modalContainer}>
-          <View style={styles.modalHeader}>
-            <Text style={styles.modalTitle}>{title}</Text>
+        <View
+          style={[
+            styles.modalContainer,
+            theme.primary_background,
+            theme.secondary_border,
+          ]}>
+          <View style={[styles.modalHeader, theme.primary_background]}>
+            <Text style={[styles.modalTitle, theme.primary_text]}>{title}</Text>
             <Pressable
-              style={[styles.button, styles.buttonClose]}
+              // style={[styles.button, styles.buttonClose]}
               onPress={() => setModalVisible(!modalVisible)}>
               <Image source={closeIcon} style={styles.closeIcon} />
             </Pressable>
