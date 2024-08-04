@@ -8,12 +8,18 @@ const ExploreDateModal = ({setDate, setDateModalVisible}) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   return (
-    <View>
+    <View style={styles.dateModalContainer}>
       {/* <Button title="Show Date Picker" onPress={showDatePicker} /> */}
       <DateTimePicker
         mode="single"
         date={selectedDate}
+        calendarTextStyle={styles.dateModalCalendarTextStyle}
         onChange={params => setDate(params.date)}
+        headerButtonsPosition="right"
+        weekDaysTextStyle={styles.dateModalWeekDaysTextStyle}
+        headerTextStyle={styles.silkaBold}
+        selectedItemColor="rgba(104,221,186,0.25)"
+        selectedTextStyle={styles.dateModalSelectedTextStyle}
       />
     </View>
   );

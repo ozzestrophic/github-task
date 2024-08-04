@@ -26,7 +26,7 @@ const ExploreLanguageModal = ({
       value={language}
       items={languageItems}
       // TODO: remove hard coding
-      maxHeight={400}
+      maxHeight={300}
       searchable={true}
       setOpen={setOpen}
       setValue={setLanguage}

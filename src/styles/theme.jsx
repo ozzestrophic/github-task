@@ -98,6 +98,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: 'normal',
   },
+  silkaBold: {
+    fontFamily: 'Silka',
+    fontSize: 16,
+    fontWeight: '500',
+  },
   dropDownPickerContainer: {
     borderRadius: 13,
     borderColor: '#ffffff',
@@ -151,7 +156,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     // minWidth: '90%',
     marginHorizontal: 24,
-    height: '60%',
+    minHeight: '45%',
+    // minHeight: 'fit-content',
+    // overflow: 'hidden',
     borderRadius: 16,
     shadowColor: 'rgba(204,212,221,0.33)',
     elevation: 20,
@@ -216,6 +223,20 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
   },
+  dateModalContainer: {
+    marginTop: 48,
+    borderTopColor: 'rgba(0, 0, 0, 0.1)',
+    borderTopWidth: 1,
+    paddingTop: 24,
+  },
+  dateModalSelectedTextStyle: {
+    color: '#68DDBA',
+    fontFamily: 'Silka',
+    fontWeight: '600',
+    fontSize: 22,
+  },
+  dateModalWeekDaysTextStyle: {color: 'gray'},
+  dateModalCalendarTextStyle: {fontFamily: 'Silka', fontSize: 17},
 });
 
 export default styles;
