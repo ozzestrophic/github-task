@@ -226,7 +226,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 22,
   },
-  dateModalWeekDaysTextStyle: {color: 'gray'},
   dateModalCalendarTextStyle: {fontFamily: 'Silka', fontSize: 17},
   dateModalTodayContainerStyle: {
     borderColor: 'rgba(104,221,186,0.25)',

@@ -38,7 +38,7 @@ const Repositories = () => {
     <View style={styles.flex1}>
       {langModalVisible && <View style={styles.modalBackdrop} />}
       <ScrollView style={[styles.tabComponent, theme.secondary_background]}>
-        <Text style={[styles.title, theme.primary_text]}>Repositories</Text>
+        <Text style={[styles.title, theme.secondary_text]}>Repositories</Text>
         <View style={styles.modalButtonsContainer}>
           <SelectModal
             title={'Select language'}
@@ -74,13 +74,13 @@ const Repositories = () => {
             <Text style={[styles.buttonLabel, theme.tertiary_text]}>
               {language ? 'Lang: ' : 'Language: '}{' '}
             </Text>
-            <Text style={theme.primary_text}>
+            <Text style={theme.secondary_text}>
               {language ? language : 'Any'}
             </Text>
             <FontAwesomeIcon
               icon={faChevronDown}
               size={12}
-              style={[styles.marginLeftAuto, theme.primary_text]}
+              style={[styles.marginLeftAuto, theme.secondary_text]}
             />
           </Pressable>
           <Pressable
@@ -93,13 +93,13 @@ const Repositories = () => {
             <Text style={[styles.buttonLabel, theme.tertiary_text]}>
               Date:{' '}
             </Text>
-            <Text style={theme.primary_text}>
+            <Text style={theme.secondary_text}>
               {date ? dayjs(date).format('D MMM YY') : 'Any'}
             </Text>
             <FontAwesomeIcon
               icon={faChevronDown}
               size={12}
-              style={[styles.marginLeftAuto, theme.primary_text]}
+              style={[styles.marginLeftAuto, theme.secondary_text]}
             />
           </Pressable>
         </View>
