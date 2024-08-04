@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {COLORS} from '../utils/style';
 
-// TODO: Add theme colors
 const styles = StyleSheet.create({
   main: {
     paddingTop: 44,
@@ -105,12 +104,10 @@ const styles = StyleSheet.create({
   },
   dropDownPickerContainer: {
     borderRadius: 13,
-    borderColor: '#ffffff',
     width: '45%',
   },
   dropDownPicker: {
     borderRadius: 13,
-    borderColor: '#ffffff',
     width: '45%',
   },
   modalButtonsContainer: {
@@ -187,11 +184,9 @@ const styles = StyleSheet.create({
   },
   selectMenuContainer: {
     // width: '100%',
-    borderColor: '#FFFFFF',
     shadowOpacity: 0,
   },
   searchContainerStyle: {
-    borderBottomColor: '#ffffff',
     padding: 0,
   },
   searchTextInputStyle: {

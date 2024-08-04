@@ -18,12 +18,13 @@ const ExploreLanguageModal = ({
       dropDownContainerStyle={[
         styles.selectMenuContainer,
         theme.primary_background,
+        theme.hideBorder,
       ]}
-      style={[theme.hideBorder, theme.primary_background]}
-      textStyle={[styles.textStyle]}
+      style={[theme.hideBorder, theme.primary_background, theme.secondary_text]}
+      textStyle={[styles.textStyle, theme.secondary_text]}
       labelStyle={styles.noHeight}
       arrowIconStyle={styles.noHeight}
-      searchContainerStyle={styles.searchContainerStyle}
+      searchContainerStyle={[styles.searchContainerStyle, theme.hideBorder]}
       searchTextInputStyle={[styles.searchTextInputStyle, theme.tertiary_text]}
       listItemContainerStyle={theme.hideBorder}
       itemSeparator={true}

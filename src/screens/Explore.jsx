@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
-import styles from '../styles/theme';
+import styles, {darkColors, lightColors} from '../styles/theme';
 import TrendingRepoCard from '../components/TrendingRepoCard';
 import {useSelector} from 'react-redux';
 import store from '../redux/store';
@@ -11,6 +11,9 @@ const selectExploreRepos = state => state.explore.exploreRepos;
 DropDownPicker.setMode('BADGE');
 
 const Explore = () => {
+  const colorMode = useSelector(state => state.colorMode.mode);
+  const theme = colorMode === 'light' ? lightColors : darkColors;
+
   const [open, setOpen] = useState(false);
   const [limit, setLimit] = useState(10);
   const [items, setItems] = useState([
@@ -28,16 +31,27 @@ const Explore = () => {
   ));
 
   return (
-    <ScrollView style={styles.tabComponent}>
-      <Text style={styles.title}>Explore popular</Text>
+    <ScrollView style={[styles.tabComponent, theme.secondary_background]}>
+      <Text style={[styles.title, theme.secondary_text]}>Explore popular</Text>
       {reposFetchState && (
         <View>
           <Text style={{textAlign: 'center', padding: 10}}>Loading...</Text>
         </View>
       )}
       <DropDownPicker
-        dropDownContainerStyle={styles.dropDownPickerContainer}
-        style={styles.dropDownPicker}
+        dropDownContainerStyle={[
+          styles.dropDownPickerContainer,
+          theme.hideBorder,
+          theme.primary_background,
+          theme.secondary_text,
+        ]}
+        style={[
+          styles.dropDownPicker,
+          theme.hideBorder,
+          theme.primary_background,
+          theme.secondary_text,
+        ]}
+        textStyle={theme.secondary_text}
         open={open}
         value={limit}
         items={items}
