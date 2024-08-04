@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Pressable, ScrollView, Text, View} from 'react-native';
-import styles from '../styles/theme';
+import styles, {darkColors, lightColors} from '../styles/theme';
 import store from '../redux/store';
 import {fetchRepos} from '../redux/repositoriesSlice';
 import {useSelector} from 'react-redux';
@@ -16,6 +16,9 @@ import {faChevronDown} from '@fortawesome/free-solid-svg-icons/faChevronDown';
 const selectRepositories = state => state.repositories.repos;
 
 const Repositories = () => {
+  const colorMode = useSelector(state => state.colorMode.mode);
+  const theme = colorMode === 'light' ? lightColors : darkColors;
+
   const [language, setLanguage] = useState('');
   const [date, setDate] = useState('2024-01-10');
   const [langModalVisible, setLangModalVisible] = useState(false);
@@ -34,8 +37,8 @@ const Repositories = () => {
   return (
     <View style={styles.flex1}>
       {langModalVisible && <View style={styles.modalBackdrop} />}
-      <ScrollView style={styles.tabComponent}>
-        <Text style={styles.title}>Repositories</Text>
+      <ScrollView style={[styles.tabComponent, theme.primary_background]}>
+        <Text style={[styles.title, theme.primary_text]}>Repositories</Text>
         <View style={styles.modalButtonsContainer}>
           <SelectModal
             title={'Select language'}
@@ -62,27 +65,41 @@ const Repositories = () => {
             />
           </SelectModal>
           <Pressable
-            style={styles.modalButton}
+            style={[
+              styles.modalButton,
+              theme.primary_background,
+              theme.secondary_border,
+            ]}
             onPress={() => setLangModalVisible(true)}>
-            <Text style={styles.buttonLabel}>
+            <Text style={[styles.buttonLabel, theme.tertiary_text]}>
               {language ? 'Lang: ' : 'Language: '}{' '}
             </Text>
-            <Text>{language ? language : 'Any'}</Text>
+            <Text style={theme.primary_text}>
+              {language ? language : 'Any'}
+            </Text>
             <FontAwesomeIcon
               icon={faChevronDown}
               size={12}
-              style={styles.marginLeftAuto}
+              style={[styles.marginLeftAuto, theme.primary_text]}
             />
           </Pressable>
           <Pressable
-            style={styles.modalButton}
+            style={[
+              styles.modalButton,
+              theme.primary_background,
+              theme.secondary_border,
+            ]}
             onPress={() => setDateModalVisible(true)}>
-            <Text style={styles.buttonLabel}>Date: </Text>
-            <Text>{date ? dayjs(date).format('D MMM YY') : 'Any'}</Text>
+            <Text style={[styles.buttonLabel, theme.tertiary_text]}>
+              Date:{' '}
+            </Text>
+            <Text style={theme.primary_text}>
+              {date ? dayjs(date).format('D MMM YY') : 'Any'}
+            </Text>
             <FontAwesomeIcon
               icon={faChevronDown}
               size={12}
-              style={styles.marginLeftAuto}
+              style={[styles.marginLeftAuto, theme.primary_text]}
             />
           </Pressable>
         </View>

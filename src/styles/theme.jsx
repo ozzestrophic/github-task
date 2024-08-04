@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {COLORS} from '../utils/style';
 
 // TODO: Add theme colors
 const styles = StyleSheet.create({
@@ -17,7 +18,6 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   tabComponent: {
-    backgroundColor: '#FAFCFE',
     flex: 1,
     paddingTop: 36,
     paddingHorizontal: 24,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontFamily: 'Silka',
-    fontWeight: 'normal',
+    fontWeight: '500',
     marginBottom: 16,
   },
   flex1: {
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   repoCard: {
     padding: 16,
     gap: 12,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
     borderRadius: 13,
     shadowColor: 'rgba(204,212,221,0.33 )',
     shadowOffset: {width: 0, height: 2},
@@ -126,18 +126,12 @@ const styles = StyleSheet.create({
     width: '45%',
     flex: 1,
     padding: 12,
-    backgroundColor: '#FFFFFF',
     borderRadius: 8,
-    shadowColor: 'rgba(204,212,221,0.33 )',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 1,
-    shadowRadius: 5,
   },
   buttonLabel: {
     fontFamily: 'Silka',
     fontSize: 14,
     fontWeight: 'normal',
-    color: '#7B848D',
   },
   centeredView: {
     flex: 1,
@@ -254,3 +248,62 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
+
+export const lightColors = StyleSheet.create({
+  primary_background: {
+    backgroundColor: COLORS.light.primary_background,
+  },
+  secondary_background: {
+    backgroundColor: COLORS.light.secondary_background,
+  },
+  secondary_border: {
+    borderColor: COLORS.light.secondary_border,
+    shadowColor: 'rgba(204,212,221,0.33 )',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 1,
+    shadowRadius: 5,
+  },
+  primary_text: {
+    color: COLORS.light.primary_text,
+  },
+  secondary_text: {
+    color: COLORS.light.secondary_text,
+  },
+  tertiary_text: {
+    color: COLORS.light.tertiary_text,
+  },
+  accent_color: {
+    color: COLORS.light.accent_color,
+  },
+  accent_color_faded: {
+    color: COLORS.light.accent_color_faded,
+  },
+});
+export const darkColors = StyleSheet.create({
+  primary_background: {
+    backgroundColor: COLORS.dark.primary_background,
+  },
+  secondary_background: {
+    backgroundColor: COLORS.dark.secondary_background,
+  },
+  secondary_border: {
+    borderColor: COLORS.dark.secondary_border,
+    borderWidth: 1,
+    borderStyle: 'solid',
+  },
+  primary_text: {
+    color: COLORS.dark.primary_text,
+  },
+  secondary_text: {
+    color: COLORS.dark.secondary_text,
+  },
+  tertiary_text: {
+    color: COLORS.dark.tertiary_text,
+  },
+  accent_color: {
+    color: COLORS.dark.accent_color,
+  },
+  accent_color_faded: {
+    color: COLORS.dark.accent_color_faded,
+  },
+});
