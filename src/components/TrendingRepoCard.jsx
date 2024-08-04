@@ -22,7 +22,9 @@ const TrendingRepoCard = ({repo}) => {
         </View>
       </View>
       <Text style={styles.repoCardTitle}>{repo.name}</Text>
-      <Text style={styles.repoCardDescription}>{repo.description.trim()}</Text>
+      <Text style={styles.repoCardDescription}>
+        {repo.description ? repo.description.trim() : ''}
+      </Text>
       <View style={styles.separator} />
       <View style={styles.repoCardFooter}>
         <Text style={(styles.silkaNormal, {flex: 3})}>

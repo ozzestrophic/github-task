@@ -16,15 +16,15 @@ const selectRepositories = state => state.repositories.repos;
 
 const Repositories = () => {
   const [language, setLanguage] = useState('');
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState('2024-01-10');
   const [langModalVisible, setLangModalVisible] = useState(false);
   const [dateModalVisible, setDateModalVisible] = useState(false);
   const [languageSelectOpen, setLanguageSelectOpen] = useState(false);
   const [languageItems, setLanguageItems] = useState(languageData);
 
   useEffect(() => {
-    store.dispatch(fetchRepos(10, '2019-01-10', language));
-  }, [language]);
+    store.dispatch(fetchRepos(10, date, language));
+  }, [language, date]);
   const fetchedRepos = useSelector(selectRepositories);
   const reposFetchState = useSelector(state => state.repositories.loading);
   const renderedListRepos = fetchedRepos.map((item, index) => (
@@ -55,6 +55,7 @@ const Repositories = () => {
             modalVisible={dateModalVisible}
             setModalVisible={setDateModalVisible}>
             <ExploreDateModal
+              date={date}
               setDate={setDate}
               setDateModalVisible={setDateModalVisible}
             />
