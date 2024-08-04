@@ -8,6 +8,7 @@ const ExploreLanguageModal = ({
   setLanguage,
   setOpen,
   setLanguageItems,
+  setLangModalVisible,
 }) => {
   return (
     <DropDownPicker
@@ -31,6 +32,7 @@ const ExploreLanguageModal = ({
       setOpen={setOpen}
       setValue={setLanguage}
       setItems={setLanguageItems}
+      onChangeValue={() => setLangModalVisible(false)}
     />
   );
 };

@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {Image, Modal, Pressable, ScrollView, Text, View} from 'react-native';
+import {Pressable, ScrollView, Text, View} from 'react-native';
 import styles from '../styles/theme';
 import store from '../redux/store';
 import {fetchRepos} from '../redux/repositoriesSlice';
 import {useSelector} from 'react-redux';
 import TrendingRepoCard from '../components/TrendingRepoCard';
-import DropDownPicker from 'react-native-dropdown-picker';
-import closeIcon from '../assets/icons/close.png';
 import {languageData} from '../utils/languages';
 import ExploreLanguageModal from '../components/ExploreLanguageModal';
 import SelectModal from '../components/SelectModal';
