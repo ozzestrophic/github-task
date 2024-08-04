@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from '../styles/theme';
 import DateTimePicker from 'react-native-ui-datepicker';
-import {Button, View} from 'react-native';
+import {View} from 'react-native';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 
