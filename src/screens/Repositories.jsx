@@ -5,7 +5,6 @@ import store from '../redux/store';
 import {fetchRepos} from '../redux/repositoriesSlice';
 import {useSelector} from 'react-redux';
 import {languageData} from '../utils/languages';
-import ExploreLanguageModal from '../components/ExploreLanguageModal';
 import SelectModal from '../components/SelectModal';
 import ExploreDateModal from '../components/ExploreDateModal';
 import dayjs from 'dayjs';
@@ -24,8 +23,6 @@ const Repositories = () => {
   const [date, setDate] = useState('2024-01-10');
   const [langModalVisible, setLangModalVisible] = useState(false);
   const [dateModalVisible, setDateModalVisible] = useState(false);
-  // const [LanguageSelectOpen, setLanguageSelectOpen] = useState(false);
-  // const [languageItems, setLanguageItems] = useState(languageData);
 
   useEffect(() => {
     store.dispatch(fetchRepos(10, date, language));
@@ -45,15 +42,6 @@ const Repositories = () => {
             title={'Select language'}
             modalVisible={langModalVisible}
             setModalVisible={setLangModalVisible}>
-            {/* <ExploreLanguageModal
-              langModalVisible={langModalVisible}
-              setLangModalVisible={setLangModalVisible}
-              language={language}
-              setLanguage={setLanguage}
-              languageItems={languageItems}
-              setLanguageItems={setLanguageItems}
-              setOpen={setLanguageSelectOpen}
-            /> */}
             <SelectForm
               setModalVisible={setLangModalVisible}
               setSelectedOption={setLanguage}
