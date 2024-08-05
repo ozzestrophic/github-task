@@ -3,7 +3,7 @@ import {COLORS} from '../utils/style';
 
 const styles = StyleSheet.create({
   main: {
-    paddingTop: 44,
+    paddingTop: 64,
     flex: 1,
   },
   logoImage: {
@@ -14,12 +14,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 24,
+    paddingHorizontal: 12,
   },
   tabComponent: {
     flex: 1,
     paddingTop: 36,
-    paddingHorizontal: 24,
+    paddingHorizontal: 12,
   },
   title: {
     fontSize: 20,
