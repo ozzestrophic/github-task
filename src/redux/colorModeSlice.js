@@ -1,5 +1,5 @@
 const initialState = {
-  mode: 'dark',
+  mode: 'light',
 };
 
 const SET_COLOR_MODE = 'SET_COLOR_MODE';
