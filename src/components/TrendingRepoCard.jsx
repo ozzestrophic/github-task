@@ -3,6 +3,10 @@ import {Text, View} from 'react-native';
 import styles, {darkColors, lightColors} from '../styles/theme';
 import moment from 'moment';
 import {useSelector} from 'react-redux';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faStar} from '@fortawesome/free-regular-svg-icons/faStar';
+import {faFileLines} from '@fortawesome/free-regular-svg-icons/faFileLines';
+
 const TrendingRepoCard = ({repo}) => {
   let starsCount = repo.stargazers_count;
   if (starsCount > 1000) {
@@ -22,6 +26,7 @@ const TrendingRepoCard = ({repo}) => {
           Trending repository
         </Text>
         <View style={styles.repoCardStarContainer}>
+          <FontAwesomeIcon icon={faStar} style={theme.accent_color} />
           <Text style={[styles.repoCardStarLabel, theme.secondary_text]}>
             Star
           </Text>
@@ -40,9 +45,16 @@ const TrendingRepoCard = ({repo}) => {
           </View>
         </View>
       </View>
-      <Text style={[styles.repoCardTitle, theme.primary_text]}>
-        {repo.name}
-      </Text>
+      <View style={styles.repoCardTitleContainer}>
+        <FontAwesomeIcon
+          icon={faFileLines}
+          style={theme.accent_color}
+          size={20}
+        />
+        <Text style={[styles.repoCardTitle, theme.primary_text]}>
+          {repo.name}
+        </Text>
+      </View>
       <Text style={[styles.repoCardDescription, theme.secondary_text]}>
         {repo.description ? repo.description.trim() : ''}
       </Text>

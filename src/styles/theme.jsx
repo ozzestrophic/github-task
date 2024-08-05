@@ -70,10 +70,11 @@ const styles = StyleSheet.create({
     // backgroundColor: 'rgba(43, 17, 144, 0.11)',
     borderRadius: 4,
   },
+  repoCardTitleContainer: {flexDirection: 'row', alignItems: 'center', gap: 5},
   repoCardTitle: {
     fontFamily: 'Silka',
     fontSize: 18,
-    fontWeight: 'normal',
+    fontWeight: '500',
     color: '#2B1190',
   },
   repoCardDescription: {
