@@ -9,9 +9,8 @@ import {
 } from 'react-native';
 import styles from '../styles/theme';
 
-const SelectForm = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+const SelectForm = (setModalVisible, setSelectedOption, selectedOption) => {
+  // const [modalVisible, setModalVisible] = useState(false);
   const options = [
     {label: 'Option 1', value: 1},
     {label: 'Option 2', value: 2},
@@ -42,7 +41,7 @@ const SelectForm = () => {
             borderRadius: 12,
             borderColor: 'gray',
             width: '100%',
-            color: 'white',
+            color: 'gray',
           }}
           onChangeText={text => {
             filterOptions(text);

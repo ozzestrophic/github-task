@@ -19,7 +19,7 @@ const ExploreDateModal = ({date, setDate, setDateModalVisible}) => {
   };
 
   return (
-    <View style={styles.dateModalContainer}>
+    <View style={[styles.dateModalContainer, theme.topBorder]}>
       <DateTimePicker
         mode="single"
         date={date}

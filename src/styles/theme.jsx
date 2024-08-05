@@ -143,12 +143,12 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   modalContainer: {
-    paddingHorizontal: 24,
-    paddingVertical: 10,
+    paddingVertical: 24,
+    gap: 24,
     minWidth: '90%',
     marginHorizontal: 24,
-    minHeight: '45%',
-    // minHeight: 'fit-content',
+    // minHeight: '45%',
+    minHeight: 'fit-content',
     // overflow: 'hidden',
     borderRadius: 16,
     elevation: 20,
@@ -157,12 +157,10 @@ const styles = StyleSheet.create({
     // shadowRadius: 5,
   },
   modalHeader: {
-    position: 'absolute',
     flexDirection: 'row',
+    paddingHorizontal: 24,
     width: '100%',
     justifyContent: 'space-between',
-    top: 24,
-    left: 24,
     zIndex: 2,
   },
   modalTitle: {
@@ -208,10 +206,7 @@ const styles = StyleSheet.create({
     height: 20,
   },
   dateModalContainer: {
-    marginTop: 48,
-    borderTopColor: 'rgba(0, 0, 0, 0.1)',
-    borderTopWidth: 1,
-    paddingTop: 24,
+    padding: 16,
   },
   dateModalSelectedTextStyle: {
     color: '#68DDBA',
@@ -270,6 +265,10 @@ export const lightColors = StyleSheet.create({
   hideBorder: {
     borderColor: COLORS.light.primary_background,
   },
+  topBorder: {
+    borderTopColor: 'rgba(0, 0, 0, 0.1)',
+    borderTopWidth: 1,
+  },
 });
 export const darkColors = StyleSheet.create({
   primary_background: {
@@ -303,5 +302,9 @@ export const darkColors = StyleSheet.create({
   },
   hideBorder: {
     borderColor: COLORS.dark.primary_background,
+  },
+  topBorder: {
+    borderTopColor: 'rgba(255, 255, 255, 0.1)',
+    borderTopWidth: 1,
   },
 });
