@@ -1,11 +1,11 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import styles, {darkColors, lightColors} from '../styles/theme';
-import moment from 'moment';
 import {useSelector} from 'react-redux';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faStar} from '@fortawesome/free-regular-svg-icons/faStar';
 import {faFileLines} from '@fortawesome/free-regular-svg-icons/faFileLines';
+import dayjs from 'dayjs';
 
 const TrendingRepoCard = ({repo}) => {
   let starsCount = repo.stargazers_count;
@@ -61,7 +61,7 @@ const TrendingRepoCard = ({repo}) => {
       <View style={styles.separator} />
       <View style={styles.repoCardFooter}>
         <Text style={[styles.silkaNormal, styles.flex3, theme.tertiary_text]}>
-          Updated {moment(repo.updated_at).fromNow()}
+          Updated {dayjs(repo.updated_at).fromNow()}
         </Text>
         <Text style={[styles.silkaNormal, styles.flex2, theme.tertiary_text]}>
           {repo.language}
