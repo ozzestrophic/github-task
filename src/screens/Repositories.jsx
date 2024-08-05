@@ -24,8 +24,8 @@ const Repositories = () => {
   const [date, setDate] = useState('2024-01-10');
   const [langModalVisible, setLangModalVisible] = useState(false);
   const [dateModalVisible, setDateModalVisible] = useState(false);
-  const [LanguageSelectOpen, setLanguageSelectOpen] = useState(false);
-  const [languageItems, setLanguageItems] = useState(languageData);
+  // const [LanguageSelectOpen, setLanguageSelectOpen] = useState(false);
+  // const [languageItems, setLanguageItems] = useState(languageData);
 
   useEffect(() => {
     store.dispatch(fetchRepos(10, date, language));
@@ -54,7 +54,13 @@ const Repositories = () => {
               setLanguageItems={setLanguageItems}
               setOpen={setLanguageSelectOpen}
             /> */}
-            <SelectForm />
+            <SelectForm
+              setModalVisible={setLangModalVisible}
+              setSelectedOption={setLanguage}
+              selectedOption={language}
+              passedOptions={languageData}
+              placeholder={'Filter Languages'}
+            />
           </SelectModal>
           <SelectModal
             title={'Select Date'}

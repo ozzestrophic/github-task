@@ -1,60 +1,53 @@
 import React, {useState} from 'react';
-import {
-  FlatList,
-  Modal,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import styles from '../styles/theme';
+import {FlatList, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import styles, {darkColors, lightColors} from '../styles/theme';
+import {useSelector} from 'react-redux';
 
-const SelectForm = (setModalVisible, setSelectedOption, selectedOption) => {
-  // const [modalVisible, setModalVisible] = useState(false);
-  const options = [
-    {label: 'Option 1', value: 1},
-    {label: 'Option 2', value: 2},
-    {label: 'Option 3', value: 3},
-  ];
-  const [filteredOptions, setFilteredOptions] = useState([...options]);
+const SelectForm = ({
+  setModalVisible,
+  setSelectedOption,
+  selectedOption,
+  passedOptions,
+  placeholder,
+}) => {
+  const colorMode = useSelector(state => state.colorMode.mode);
+  const theme = colorMode === 'light' ? lightColors : darkColors;
 
-  //   let filteredOptions = [...options];
+  const [filteredOptions, setFilteredOptions] = useState(passedOptions);
 
   const filterOptions = text => {
-    const newFilteredOptions = options.filter(option =>
+    const newFilteredOptions = passedOptions.filter(option =>
       option.label.toLowerCase().includes(text.toLowerCase()),
     );
     setFilteredOptions(newFilteredOptions);
   };
 
   const handleSelect = option => {
-    setSelectedOption(option);
+    setSelectedOption(option.value);
     setModalVisible(false);
   };
   return (
-    <View style={{width: '100%'}}>
+    <View style={styles.selectFormContainer}>
       <View>
         <TextInput
-          style={{
-            padding: 8,
-            borderWidth: 1,
-            borderRadius: 12,
-            borderColor: 'gray',
-            width: '100%',
-            color: 'gray',
-          }}
+          style={[styles.selectFormSearchInput, theme.borderColor]}
           onChangeText={text => {
             filterOptions(text);
           }}
-          placeholder="Search..."
+          placeholder={placeholder}
+          placeholderTextColor={theme.tertiary_text.color}
         />
         <View>
           <FlatList
             data={filteredOptions}
             keyExtractor={item => item.value.toString()}
             renderItem={({item}) => (
-              <TouchableOpacity onPress={() => handleSelect(item)}>
-                <Text>{item.label}</Text>
+              <TouchableOpacity
+                onPress={() => handleSelect(item)}
+                style={[styles.selectListItem, theme.borderColor]}>
+                <Text style={[styles.selectListItemText, theme.secondary_text]}>
+                  {item.label}
+                </Text>
               </TouchableOpacity>
             )}
           />

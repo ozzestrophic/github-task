@@ -146,10 +146,9 @@ const styles = StyleSheet.create({
     paddingVertical: 24,
     gap: 24,
     minWidth: '90%',
+    maxHeight: '60%',
+    overflow: 'hidden',
     marginHorizontal: 24,
-    // minHeight: '45%',
-    minHeight: 'fit-content',
-    // overflow: 'hidden',
     borderRadius: 16,
     elevation: 20,
     // shadowOffset: {width: 0, height: 2},
@@ -226,6 +225,26 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
   },
   repoFetchIndicator: {textAlign: 'center', padding: 10},
+  selectFormContainer: {width: '100%', maxHeight: '85%'},
+  selectFormSearchInput: {
+    padding: 12,
+    marginHorizontal: 24,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderRadius: 8,
+  },
+  selectListItem: {
+    width: '100%',
+    padding: 14,
+    paddingHorizontal: 36,
+    borderBottomStyle: 'solid',
+    borderBottomWidth: 1,
+  },
+  selectListItemText: {
+    fontFamily: 'Silka',
+    fontSize: 14,
+    fontWeight: '500',
+  },
 });
 
 export default styles;
@@ -269,6 +288,9 @@ export const lightColors = StyleSheet.create({
     borderTopColor: 'rgba(0, 0, 0, 0.1)',
     borderTopWidth: 1,
   },
+  borderColor: {
+    borderColor: 'rgba(0, 0, 0, 0.1)',
+  },
 });
 export const darkColors = StyleSheet.create({
   primary_background: {
@@ -306,5 +328,8 @@ export const darkColors = StyleSheet.create({
   topBorder: {
     borderTopColor: 'rgba(255, 255, 255, 0.1)',
     borderTopWidth: 1,
+  },
+  borderColor: {
+    borderColor: 'rgba(255, 255, 255, 0.1)',
   },
 });
