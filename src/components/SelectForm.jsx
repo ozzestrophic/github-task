@@ -32,7 +32,11 @@ const SelectForm = ({
       <View>
         {!hideSelect && (
           <TextInput
-            style={[styles.selectFormSearchInput, theme.borderColor]}
+            style={[
+              styles.selectFormSearchInput,
+              theme.borderColor,
+              theme.tertiary_text,
+            ]}
             onChangeText={text => {
               filterOptions(text);
             }}
