@@ -10,13 +10,13 @@ const SelectModal = ({children, modalVisible, setModalVisible, title}) => {
 
   return (
     <Modal
-      animationType="slide"
+      animationType="fade"
       transparent={true}
       visible={modalVisible}
       onRequestClose={() => {
         setModalVisible(!modalVisible);
       }}>
-      <View style={styles.centeredView}>
+      <View style={[styles.centeredView, styles.modalBackdrop]}>
         <View
           style={[
             styles.modalContainer,

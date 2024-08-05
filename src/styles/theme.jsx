@@ -132,15 +132,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 22,
   },
   modalBackdrop: {
-    flex: 1,
     backgroundColor: 'rgba(0, 0, 0, 0.3)',
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    zIndex: 1,
   },
   modalContainer: {
     paddingVertical: 24,

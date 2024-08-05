@@ -34,7 +34,6 @@ const Repositories = () => {
   ));
   return (
     <View style={styles.flex1}>
-      {langModalVisible && <View style={styles.modalBackdrop} />}
       <ScrollView style={[styles.tabComponent, theme.secondary_background]}>
         <Text style={[styles.title, theme.secondary_text]}>Repositories</Text>
         <View style={styles.modalButtonsContainer}>
