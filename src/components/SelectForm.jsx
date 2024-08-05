@@ -9,6 +9,7 @@ const SelectForm = ({
   selectedOption,
   passedOptions,
   placeholder,
+  hideSelect,
 }) => {
   const colorMode = useSelector(state => state.colorMode.mode);
   const theme = colorMode === 'light' ? lightColors : darkColors;
@@ -29,14 +30,16 @@ const SelectForm = ({
   return (
     <View style={styles.selectFormContainer}>
       <View>
-        <TextInput
-          style={[styles.selectFormSearchInput, theme.borderColor]}
-          onChangeText={text => {
-            filterOptions(text);
-          }}
-          placeholder={placeholder}
-          placeholderTextColor={theme.tertiary_text.color}
-        />
+        {!hideSelect && (
+          <TextInput
+            style={[styles.selectFormSearchInput, theme.borderColor]}
+            onChangeText={text => {
+              filterOptions(text);
+            }}
+            placeholder={placeholder}
+            placeholderTextColor={theme.tertiary_text.color}
+          />
+        )}
         <View>
           <FlatList
             data={filteredOptions}
@@ -44,7 +47,12 @@ const SelectForm = ({
             renderItem={({item}) => (
               <TouchableOpacity
                 onPress={() => handleSelect(item)}
-                style={[styles.selectListItem, theme.borderColor]}>
+                style={[
+                  styles.selectListItem,
+                  theme.borderColor,
+                  item.value === selectedOption &&
+                    theme.accent_color_background,
+                ]}>
                 <Text style={[styles.selectListItemText, theme.secondary_text]}>
                   {item.label}
                 </Text>

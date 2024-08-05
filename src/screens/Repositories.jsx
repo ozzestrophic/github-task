@@ -101,7 +101,9 @@ const Repositories = () => {
         </View>
         {reposFetchState && (
           <View>
-            <Text style={styles.repoFetchIndicator}>Loading...</Text>
+            <Text style={[styles.repoFetchIndicator, theme.tertiary_text]}>
+              Loading...
+            </Text>
           </View>
         )}
         <View style={styles.reposContainer}>{renderedListRepos}</View>
