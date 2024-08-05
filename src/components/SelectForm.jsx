@@ -24,7 +24,7 @@ const SelectForm = ({
   };
 
   const handleSelect = option => {
-    setSelectedOption(option.value);
+    setSelectedOption(option);
     setModalVisible(false);
   };
   return (
@@ -54,7 +54,7 @@ const SelectForm = ({
                 style={[
                   styles.selectListItem,
                   theme.borderColor,
-                  item.value === selectedOption &&
+                  item.value === selectedOption.value &&
                     theme.accent_color_background,
                 ]}>
                 <Text style={[styles.selectListItemText, theme.secondary_text]}>

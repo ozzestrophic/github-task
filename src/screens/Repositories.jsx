@@ -19,13 +19,13 @@ const Repositories = () => {
   const colorMode = useSelector(state => state.colorMode.mode);
   const theme = colorMode === 'light' ? lightColors : darkColors;
 
-  const [language, setLanguage] = useState('');
-  const [date, setDate] = useState('2024-01-10');
+  const [language, setLanguage] = useState({label: '', value: ''});
+  const [date, setDate] = useState('2024-01-01');
   const [langModalVisible, setLangModalVisible] = useState(false);
   const [dateModalVisible, setDateModalVisible] = useState(false);
 
   useEffect(() => {
-    store.dispatch(fetchRepos(10, date, language));
+    store.dispatch(fetchRepos(10, date, language.value));
   }, [language, date]);
   const fetchedRepos = useSelector(selectRepositories);
   const reposFetchState = useSelector(state => state.repositories.loading);
@@ -70,7 +70,7 @@ const Repositories = () => {
               {language ? 'Lang: ' : 'Language: '}{' '}
             </Text>
             <Text style={theme.secondary_text}>
-              {language ? language : 'Any'}
+              {language.value ? language.label : 'Any'}
             </Text>
             <FontAwesomeIcon
               icon={faChevronDown}

@@ -30,12 +30,14 @@ export const fetchRepos = (
   date = '2019-01-10',
   language = 'Javascript',
 ) => {
+  const languageEncoded = encodeURIComponent(language);
   return async dispatch => {
     dispatch({type: FETCH_REPOS_REQUEST});
     try {
-      const query = `q=stars:>1${date && `+created:>${date}`}${
-        language && `+language:${language}&`
+      const query = `q=stars:%3E1${date && `+created:%3E${date}`}${
+        languageEncoded && `+language:${languageEncoded}`
       }&sort=stars&order=desc${limit && `&per_page=${limit}`}`;
+      console.log(query);
       const response = await axios.get(
         `https://api.github.com/search/repositories?${query}`,
       );
