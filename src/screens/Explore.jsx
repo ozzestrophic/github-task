@@ -20,7 +20,9 @@ const Explore = () => {
   const [limit, setLimit] = useState(10);
   const items = [
     {label: 'Top 10', value: 10},
+    {label: 'Top 25', value: 25},
     {label: 'Top 50', value: 50},
+    {label: 'Top 75', value: 75},
     {label: 'Top 100', value: 100},
   ];
   useEffect(() => {

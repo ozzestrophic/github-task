@@ -27,9 +27,7 @@ const SelectModal = ({children, modalVisible, setModalVisible, title}) => {
             <Text style={[styles.modalTitle, theme.secondary_text]}>
               {title}
             </Text>
-            <Pressable
-              // style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}>
+            <Pressable onPress={() => setModalVisible(!modalVisible)}>
               <Image source={closeIcon} style={styles.closeIcon} />
             </Pressable>
           </View>

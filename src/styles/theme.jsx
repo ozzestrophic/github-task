@@ -151,9 +151,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 24,
     borderRadius: 16,
     elevation: 20,
-    // shadowOffset: {width: 0, height: 2},
-    // shadowOpacity: 1,
-    // shadowRadius: 5,
   },
   modalHeader: {
     flexDirection: 'row',
@@ -225,7 +222,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
   },
   repoFetchIndicator: {textAlign: 'center', padding: 10},
-  selectFormContainer: {width: '100%', maxHeight: '85%'},
+  selectFormContainer: {width: '100%', height: '80%'},
   selectFormSearchInput: {
     padding: 12,
     marginHorizontal: 24,
