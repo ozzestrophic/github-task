@@ -12,6 +12,7 @@ import dayjs from 'dayjs';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import RepoCard from '../components/RepoCard';
+import SelectForm from '../components/SelectForm';
 
 const selectRepositories = state => state.repositories.repos;
 
@@ -44,7 +45,7 @@ const Repositories = () => {
             title={'Select language'}
             modalVisible={langModalVisible}
             setModalVisible={setLangModalVisible}>
-            <ExploreLanguageModal
+            {/* <ExploreLanguageModal
               langModalVisible={langModalVisible}
               setLangModalVisible={setLangModalVisible}
               language={language}
@@ -52,7 +53,8 @@ const Repositories = () => {
               languageItems={languageItems}
               setLanguageItems={setLanguageItems}
               setOpen={setLanguageSelectOpen}
-            />
+            /> */}
+            <SelectForm />
           </SelectModal>
           <SelectModal
             title={'Select Date'}

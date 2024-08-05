@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     paddingHorizontal: 24,
     paddingVertical: 10,
-    // minWidth: '90%',
+    minWidth: '90%',
     marginHorizontal: 24,
     minHeight: '45%',
     // minHeight: 'fit-content',
