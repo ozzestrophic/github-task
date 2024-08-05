@@ -17,7 +17,6 @@ const Explore = () => {
   const theme = colorMode === 'light' ? lightColors : darkColors;
 
   const [open, setOpen] = useState(false);
-  const [limit, setLimit] = useState(10);
   const items = [
     {label: 'Top 10', value: 10},
     {label: 'Top 25', value: 25},
@@ -25,8 +24,9 @@ const Explore = () => {
     {label: 'Top 75', value: 75},
     {label: 'Top 100', value: 100},
   ];
+  const [limit, setLimit] = useState(items[0]);
   useEffect(() => {
-    store.dispatch(fetchExploreRepos(limit));
+    store.dispatch(fetchExploreRepos(limit.value));
   }, [limit]);
   const exploreRepos = useSelector(selectExploreRepos);
   const reposFetchState = useSelector(state => state.explore.loading);
@@ -58,7 +58,7 @@ const Explore = () => {
         ]}
         onPress={() => setOpen(true)}>
         <Text style={[styles.buttonLabel, theme.tertiary_text]}>View: </Text>
-        <Text style={theme.secondary_text}>{'Top ' + limit}</Text>
+        <Text style={theme.secondary_text}>{limit.label}</Text>
         <FontAwesomeIcon
           icon={faChevronDown}
           size={12}

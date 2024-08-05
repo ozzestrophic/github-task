@@ -37,7 +37,6 @@ export const fetchRepos = (
       const query = `q=stars:%3E1${date && `+created:%3E${date}`}${
         languageEncoded && `+language:${languageEncoded}`
       }&sort=stars&order=desc${limit && `&per_page=${limit}`}`;
-      console.log(query);
       const response = await axios.get(
         `https://api.github.com/search/repositories?${query}`,
       );
