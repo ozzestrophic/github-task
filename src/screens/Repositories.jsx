@@ -4,7 +4,6 @@ import styles, {darkColors, lightColors} from '../styles/theme';
 import store from '../redux/store';
 import {fetchRepos} from '../redux/repositoriesSlice';
 import {useSelector} from 'react-redux';
-import TrendingRepoCard from '../components/TrendingRepoCard';
 import {languageData} from '../utils/languages';
 import ExploreLanguageModal from '../components/ExploreLanguageModal';
 import SelectModal from '../components/SelectModal';
@@ -12,6 +11,7 @@ import ExploreDateModal from '../components/ExploreDateModal';
 import dayjs from 'dayjs';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons/faChevronDown';
+import RepoCard from '../components/RepoCard';
 
 const selectRepositories = state => state.repositories.repos;
 
@@ -32,7 +32,7 @@ const Repositories = () => {
   const fetchedRepos = useSelector(selectRepositories);
   const reposFetchState = useSelector(state => state.repositories.loading);
   const renderedListRepos = fetchedRepos.map((item, index) => (
-    <TrendingRepoCard key={index} repo={item} />
+    <RepoCard key={index} repo={item} />
   ));
   return (
     <View style={styles.flex1}>

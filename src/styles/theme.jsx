@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   repoCardFooter: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    gap: 24,
     alignItems: 'center',
   },
   silkaNormal: {
