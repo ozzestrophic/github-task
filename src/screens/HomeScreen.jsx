@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Pressable, View} from 'react-native';
+import {Image, Pressable, SafeAreaView, View} from 'react-native';
 import styles, {darkColors, lightColors} from '../styles/theme';
 import {useDispatch, useSelector} from 'react-redux';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -21,7 +21,7 @@ const HomeScreen = () => {
       payload: colorMode === 'light' ? 'dark' : 'light',
     });
   return (
-    <View style={[styles.main, theme.primary_background]}>
+    <SafeAreaView style={[styles.main, theme.primary_background]}>
       <View style={styles.logoBar}>
         <Image
           style={styles.logoImage}
@@ -39,7 +39,7 @@ const HomeScreen = () => {
         </Pressable>
       </View>
       <NavigationComponent />
-    </View>
+    </SafeAreaView>
   );
 };
 export default HomeScreen;

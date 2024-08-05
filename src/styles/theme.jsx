@@ -3,7 +3,7 @@ import {COLORS} from '../utils/style';
 
 const styles = StyleSheet.create({
   main: {
-    paddingTop: 64,
+    paddingTop: 24,
     flex: 1,
   },
   logoImage: {
@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
   },
   repoCardStarCounterContainer: {
     padding: 4,
-    // backgroundColor: 'rgba(43, 17, 144, 0.11)',
     borderRadius: 4,
   },
   repoCardTitleContainer: {flexDirection: 'row', alignItems: 'center', gap: 5},
@@ -140,7 +139,6 @@ const styles = StyleSheet.create({
     paddingVertical: 24,
     gap: 24,
     minWidth: '90%',
-    maxHeight: '60%',
     overflow: 'hidden',
     marginHorizontal: 24,
     borderRadius: 16,
@@ -169,12 +167,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.1)',
   },
   selectMenuWrapper: {
-    zIndex: 1,
+    height: 400,
   },
-  selectMenuContainer: {
-    // width: '100%',
-    shadowOpacity: 0,
-  },
+  selectFormContainer: {width: '100%', height: '75%'},
   searchContainerStyle: {
     padding: 0,
   },
@@ -216,7 +211,6 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
   },
   repoFetchIndicator: {textAlign: 'center', padding: 10},
-  selectFormContainer: {width: '100%', height: '80%'},
   selectFormSearchInput: {
     padding: 12,
     marginHorizontal: 24,
